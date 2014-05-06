@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using NpgsqlTypes;
+using System.ComponentModel;
 
 namespace Gymverksamhet_G3
 {
@@ -17,5 +19,15 @@ namespace Gymverksamhet_G3
         {
             InitializeComponent();
         }
+        //VARIABLER
+
+
+        //KNAPPAR & KONTROLLER
+
+
+        //METODER
+
+
+
     }
 }
