@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Gymverksamhet_G3
 {
-    class Kompetens
+    class Kompetens_Instruktor
     {
+        public string KompetensID { get; set; }
+        public string InstruktorsID { get; set; }
 
 
     }

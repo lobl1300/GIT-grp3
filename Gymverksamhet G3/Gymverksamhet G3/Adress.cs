@@ -8,6 +8,13 @@ namespace Gymverksamhet_G3
 {
     class Adress
     {
+        public string Gatuadress { get; set; }
+        public string Postnummer { get; set; }
+        public string Ort { get; set; }
 
+        public override string ToString()
+        {
+            return Postnummer + " " + Ort;
+        }
     }
 }
