@@ -8,11 +8,11 @@ namespace Gymverksamhet_G3
 {
     class Bokning
     {
+        //PROPERTIES
         public string PassnummerID { get; set; }
         public string MedlemsID { get; set; }
-        public string Testvariabel { get; set; }
 
-        public string MedlemsID { get; set; }
-        public string Testvariabel { get; set; }
+        //METODER
+      
     }
 }

@@ -8,10 +8,11 @@ namespace Gymverksamhet_G3
 {
     class Lokal
     {
+        //PROPERTIES
         public string Rumsnummer { get; set; }
         public bool Utrustning { get; set; }
         public string Storlek { get; set; }
         
-
+        //METODER
     }
 }

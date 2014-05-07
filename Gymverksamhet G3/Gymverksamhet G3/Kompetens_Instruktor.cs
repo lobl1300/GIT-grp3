@@ -8,9 +8,11 @@ namespace Gymverksamhet_G3
 {
     class Kompetens_Instruktor
     {
+        //PROPERTIES
         public string KompetensID { get; set; }
         public string InstruktorsID { get; set; }
 
+        //METODER
 
     }
 }
