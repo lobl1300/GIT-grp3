@@ -13,15 +13,9 @@ namespace Gymverksamhet_G3
 {
     class Databasfunktioner
     {
-<<<<<<< HEAD
         //VARIABLER
         //private const string conString = "GYM";
         private const string conString = "grp3vt14";
-=======
-        //private const string conString = "GYM";
-        private const string conString = "grp13vt14";
->>>>>>> 157e3cc4a1217f8b6b1fcb7a3a3c5549f0319bd1
-
         
         //METODER
         //Lägg till medlem med parametrar
