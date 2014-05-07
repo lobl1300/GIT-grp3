@@ -15,6 +15,8 @@ namespace Gymverksamhet_G3
         public string Telefonummer { get; set; }
         public string Mailadress { get; set; }
         public string Gatuadress { get; set; }
+        //public string Mailadress { get; set; }
+        //public string Gatuadress { get; set; }
 
         //METODER
         public override string ToString()
