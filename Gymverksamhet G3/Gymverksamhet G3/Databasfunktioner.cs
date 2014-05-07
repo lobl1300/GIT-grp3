@@ -13,7 +13,8 @@ namespace Gymverksamhet_G3
 {
     class Databasfunktioner
     {
-        private const string conString = "GYM";
+        //private const string conString = "GYM";
+        private const string conString = "grp13vt14";
 
         //Lägg till medlem med parametrar
         public static void AddMedlem(string regMedlemsnummer, string regFornamn, string regEfternamn, string regTelefon, string regMailadress, string regGatuadress, string regMedlemsskapstyp, string regMedlemskort)
