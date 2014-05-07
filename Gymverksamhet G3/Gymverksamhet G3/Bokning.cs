@@ -10,9 +10,8 @@ namespace Gymverksamhet_G3
     {
         public string PassnummerID { get; set; }
         public string MedlemsID { get; set; }
-        //public string InstruktorsID { get; set; }
-        //public DateTime Tid { get; set; }
-        //public string Lokal { get; set; }
+        public string Testvariabel { get; set; }
+
 
 
     }
