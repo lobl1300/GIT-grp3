@@ -14,6 +14,5 @@ namespace Gymverksamhet_G3
 
         public string MedlemsID { get; set; }
         public string Testvariabel { get; set; }
-
     }
 }
