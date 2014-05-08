@@ -9,7 +9,7 @@ namespace Gymverksamhet_G3
     class Medlemskort: Medlem
     {
         //PROPERTIES
-        public string Medlemskort { get; set; }
+        public string Medlemskortet { get; set; }
         public string Utgangsdatum { get; set; }
 
         //METODER

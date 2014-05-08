@@ -13,10 +13,26 @@ namespace Gymverksamhet_G3
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+            Login loginForm = new Login();
+            DialogResult dr = loginForm.ShowDialog();
+                if(dr == DialogResult.OK)
+                {
+                    Application.Run(new Form1());                    
+                }
+                else if(dr == DialogResult.Retry)
+                {
+                    MessageBox.Show("Nej. Gör om, gör rätt!");
+                    //Application.Exit();
+                }
+                else
+                {
+                   // Application.Exit();
+                }
+            
         }
     }
 }
