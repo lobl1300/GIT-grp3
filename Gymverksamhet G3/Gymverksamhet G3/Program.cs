@@ -21,16 +21,11 @@ namespace Gymverksamhet_G3
             DialogResult dr = loginForm.ShowDialog();
                 if(dr == DialogResult.OK)
                 {
-                    Application.Run(new Form1());                    
-                }
-                else if(dr == DialogResult.Retry)
-                {
-                    MessageBox.Show("Nej. Gör om, gör rätt!");
-                    //Application.Exit();
+                    Application.Run(new Form1());       //Här körs Formulär ett med programmet             
                 }
                 else
                 {
-                   // Application.Exit();
+                   // Application.Exit();               //Failsafe stänger ner applikationen
                 }
             
         }

@@ -24,15 +24,22 @@ namespace Gymverksamhet_G3
     
         //KONTROLLER
         private void button_Login_Click(object sender, EventArgs e)
-        {
-            if (textBox_Login_User.Text == user1 || textBox_Login_User.Text == user2 || textBox_Login_User.Text == user3 && textBox_Login_User.Text == pass)
+        {   //HÅRDKODAT, BYTS MOT DATABASFUNKTION...när den är skriven
+            if (textBox_Login_User.Text == user1 || textBox_Login_User.Text == user2 || textBox_Login_User.Text == user3)   //Användarnamn OK?
             {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else
+                if (textBox_Login_Pass.Text == pass)                                                                        //Lösenord OK?
+                {
+                    this.DialogResult = DialogResult.OK;                                                                    //Skicka resultat OK
+                    this.Close();                                                                                           //Stäng formulär
+                }
+                else                                                                                                        //Lösen EJ ok
+                {
+                    MessageBox.Show("Fel lösenord");                                                                        
+                }
+            }  
+            else                                                                                                            //Användare EJ ok
             {
-                this.DialogResult = DialogResult.Retry;
+                MessageBox.Show("Fel Användarnamn");                
             }
         }
 
