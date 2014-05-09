@@ -71,7 +71,7 @@
             this.Söndag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox_Instruktor_Lista = new System.Windows.Forms.GroupBox();
-            this.listBox_Instruktor_ = new System.Windows.Forms.ListBox();
+            this.listBox_Instruktor = new System.Windows.Forms.ListBox();
             this.groupBox_Instruktor_ = new System.Windows.Forms.GroupBox();
             this.button_Instruktor_TaBort = new System.Windows.Forms.Button();
             this.button_Instruktor_Uppdatera = new System.Windows.Forms.Button();
@@ -487,7 +487,7 @@
             // 
             // groupBox_Instruktor_Lista
             // 
-            this.groupBox_Instruktor_Lista.Controls.Add(this.listBox_Instruktor_);
+            this.groupBox_Instruktor_Lista.Controls.Add(this.listBox_Instruktor);
             this.groupBox_Instruktor_Lista.Location = new System.Drawing.Point(294, 3);
             this.groupBox_Instruktor_Lista.Name = "groupBox_Instruktor_Lista";
             this.groupBox_Instruktor_Lista.Size = new System.Drawing.Size(328, 331);
@@ -495,13 +495,13 @@
             this.groupBox_Instruktor_Lista.TabStop = false;
             this.groupBox_Instruktor_Lista.Text = "Instruktörslista";
             // 
-            // listBox_Instruktor_
+            // listBox_Instruktor
             // 
-            this.listBox_Instruktor_.FormattingEnabled = true;
-            this.listBox_Instruktor_.Location = new System.Drawing.Point(6, 21);
-            this.listBox_Instruktor_.Name = "listBox_Instruktor_";
-            this.listBox_Instruktor_.Size = new System.Drawing.Size(316, 186);
-            this.listBox_Instruktor_.TabIndex = 0;
+            this.listBox_Instruktor.FormattingEnabled = true;
+            this.listBox_Instruktor.Location = new System.Drawing.Point(6, 21);
+            this.listBox_Instruktor.Name = "listBox_Instruktor";
+            this.listBox_Instruktor.Size = new System.Drawing.Size(316, 186);
+            this.listBox_Instruktor.TabIndex = 0;
             // 
             // groupBox_Instruktor_
             // 
@@ -704,6 +704,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox_Medlemsuppgifter.ResumeLayout(false);
@@ -764,7 +765,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Söndag;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox_Instruktor_Lista;
-        private System.Windows.Forms.ListBox listBox_Instruktor_;
+        private System.Windows.Forms.ListBox listBox_Instruktor;
         private System.Windows.Forms.GroupBox groupBox_Instruktor_;
         private System.Windows.Forms.Button button_Instruktor_TaBort;
         private System.Windows.Forms.Button button_Instruktor_Uppdatera;

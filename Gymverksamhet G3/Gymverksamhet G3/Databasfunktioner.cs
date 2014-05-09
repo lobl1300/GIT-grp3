@@ -175,7 +175,7 @@ namespace Gymverksamhet_G3
         //*************************************************************************************************************************************
         //Tränare
 
-        public static void AddInstruktor(string regPersonnummer, string regFornamn, string regEfternamn, string regTelefon, string regMailadress, string regGatuadress)
+        public static void AddInstruktor(string regInstruktorsnummer, string regFornamn, string regEfternamn, string regTelefon, string regMailadress, string regGatuadress)
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
             NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
@@ -185,11 +185,11 @@ namespace Gymverksamhet_G3
                 conn.Open();
                 trans = conn.BeginTransaction();
 
-                NpgsqlCommand command1 = new NpgsqlCommand(@"INSERT INTO instruktor (personnummer, fornamn, efternamn, telefonnummer, mailadress, gatuadress)
-                                                            VALUES (:newPersonnummer, :newFornamn, :newEfternamn, :newTelefonnummer, :newMailadress, :newGatuadress)", conn);
+                NpgsqlCommand command1 = new NpgsqlCommand(@"INSERT INTO instruktor (instruktorsnummer, fornamn, efternamn, telefonnummer, mailadress, gatuadress)
+                                                            VALUES (:newInstruktorsnummer, :newFornamn, :newEfternamn, :newTelefonnummer, :newMailadress, :newGatuadress)", conn);
 
-                command1.Parameters.Add(new NpgsqlParameter("newPersonnummer", NpgsqlDbType.Varchar));
-                command1.Parameters["newPersonnummer"].Value = regPersonnummer;
+                command1.Parameters.Add(new NpgsqlParameter("newInstruktorsnummer", NpgsqlDbType.Varchar));
+                command1.Parameters["newInstruktorsnummer"].Value = regInstruktorsnummer;
                 command1.Parameters.Add(new NpgsqlParameter("newFornamn", NpgsqlDbType.Varchar));
                 command1.Parameters["newFornamn"].Value = regFornamn;
                 command1.Parameters.Add(new NpgsqlParameter("newEfternamn", NpgsqlDbType.Varchar));
@@ -237,7 +237,7 @@ namespace Gymverksamhet_G3
                 conn.Close();
             }
         }
-        public static void UpdateInstruktor(string Personnummer, string nyttFornamn, string nyttEfternamn, string nyTelefon, string nyMailadress, string nyGatuadress)
+        public static void UpdateInstruktor(string Instruktorsnummer, string nyttFornamn, string nyttEfternamn, string nyTelefon, string nyMailadress, string nyGatuadress)
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
             NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
@@ -248,10 +248,10 @@ namespace Gymverksamhet_G3
                                                            telefonnummer = :nTelefon,
                                                            mailadress = :nMailadress,
                                                            gatuadress = :nGatuadress                                                          
-                                                       WHERE personnummer = :Personnummer", conn);
+                                                       WHERE instruktorsnummer = :Instruktorsnummer", conn);
 
-            command.Parameters.Add(new NpgsqlParameter("Personnummer", NpgsqlDbType.Varchar));
-            command.Parameters["Personnummer"].Value = Personnummer;
+            command.Parameters.Add(new NpgsqlParameter("instruktorsnummer", NpgsqlDbType.Varchar));
+            command.Parameters["instruktorsnummer"].Value = Instruktorsnummer;
             command.Parameters.Add(new NpgsqlParameter("nFornamn", NpgsqlDbType.Varchar));
             command.Parameters["nFornamn"].Value = nyttFornamn;
             command.Parameters.Add(new NpgsqlParameter("nEfternamn", NpgsqlDbType.Varchar));
@@ -267,17 +267,17 @@ namespace Gymverksamhet_G3
             conn.Close();
         }
 
-        public static void RemoveInstruktor(string Personnummer)           //Ta bort rad från tabell tränare
+        public static void RemoveInstruktor(string Instruktorsnummer)           //Ta bort rad från tabell tränare
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
             NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
             conn.Open();
-            NpgsqlCommand command = new NpgsqlCommand("DELETE FROM tranare WHERE personnummer ='" + Personnummer + "'", conn);
+            NpgsqlCommand command = new NpgsqlCommand("DELETE FROM tranare WHERE instruktorsnummer ='" + Instruktorsnummer + "'", conn);
             int numberOfRowsAffected = command.ExecuteNonQuery();
             conn.Close();
         }
 
-        public static BindingList<Instruktor> GetTranare()                 //Hämta, läs in, sortera & presentera instruktörslista
+        public static BindingList<Instruktor> GetInstruktor()                 //Hämta, läs in, sortera & presentera instruktörslista
         {
             BindingList<Instruktor> instruktorslista = new BindingList<Instruktor>();
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
@@ -289,7 +289,7 @@ namespace Gymverksamhet_G3
             {
                 Instruktor instruktor = new Instruktor
                 {
-                    Personnummer = (string)dr["personnummer"],
+                    Personnummer = (string)dr["instruktorsnummer"],
                     Fornamn = (string)dr["fornamn"],
                     Efternamn = (string)dr["efternamn"],
                     Telefonummer = (string)dr["telefonnummer"],

@@ -16,7 +16,13 @@ namespace Gymverksamhet_G3
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listBox_Medlem.DataSource = Databasfunktioner.GetMedlemmar();
+            listBox_Instruktor.DataSource = Databasfunktioner.GetInstruktor();
         }
         //VARIABLER
 

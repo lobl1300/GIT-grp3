@@ -17,11 +17,11 @@ namespace Gymverksamhet_G3
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Login loginForm = new Login();
+            Login loginForm = new Login();              //Kör formuläret Login
             DialogResult dr = loginForm.ShowDialog();
-                if(dr == DialogResult.OK)
+                if(dr == DialogResult.OK)               //Login OK?
                 {
-                    Application.Run(new Form1());       //Här körs Formulär ett med programmet             
+                    Application.Run(new Form1());       //Här körs Formulär ett              
                 }
                 else
                 {
