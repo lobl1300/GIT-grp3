@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl_Form1 = new System.Windows.Forms.TabControl();
+            this.tabPage_Medlemmar = new System.Windows.Forms.TabPage();
             this.groupBox_Medlemsuppgifter = new System.Windows.Forms.GroupBox();
             this.button_Medlem_Tabort = new System.Windows.Forms.Button();
             this.button_Medlem_Uppdatera = new System.Windows.Forms.Button();
@@ -60,8 +60,8 @@
             this.groupBox_Medlem = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox_Medlem = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage_Schema = new System.Windows.Forms.TabPage();
+            this.dataGridView_Schema = new System.Windows.Forms.DataGridView();
             this.Måndag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tisdag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Onsdag = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +69,7 @@
             this.Fredag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lördag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Söndag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage_Instruktörer = new System.Windows.Forms.TabPage();
             this.groupBox_Instruktor_Lista = new System.Windows.Forms.GroupBox();
             this.listBox_Instruktor = new System.Windows.Forms.ListBox();
             this.groupBox_Instruktor_ = new System.Windows.Forms.GroupBox();
@@ -86,46 +86,70 @@
             this.label_Instruktor_Telefonnummer = new System.Windows.Forms.Label();
             this.button_Instruktor_LaggTill = new System.Windows.Forms.Button();
             this.textBox_Instruktor_Telefonnummer = new System.Windows.Forms.TextBox();
-            this.textBox_Tranare_Mailadress = new System.Windows.Forms.TextBox();
+            this.textBox_Instruktor_Mailadress = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Ort = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Personnummer = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Postnummer = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Fornamn = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Gatuadress = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Efternamn = new System.Windows.Forms.TextBox();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.domainUpDown_Schema_Tid = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown_Schema_Lokal = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown_Schema_Aktivitet = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown_Schema_Instruktor = new System.Windows.Forms.DomainUpDown();
+            this.label_Schema_Datum = new System.Windows.Forms.Label();
+            this.label_Schema_Tid = new System.Windows.Forms.Label();
+            this.label_Schema_Lokal = new System.Windows.Forms.Label();
+            this.label_Schema_Aktivitet = new System.Windows.Forms.Label();
+            this.label_Schema_Instruktör = new System.Windows.Forms.Label();
+            this.dateTimePicker_Schema_Datum = new System.Windows.Forms.DateTimePicker();
+            this.tabPage_Bokning = new System.Windows.Forms.TabPage();
+            this.listBox_Bokningar = new System.Windows.Forms.ListBox();
+            this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
+            this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
+            this.groupBox_Bokning_Aktiviteter = new System.Windows.Forms.GroupBox();
+            this.listBox_Bokning_Traningspass = new System.Windows.Forms.ListBox();
+            this.groupBox_Bokningar = new System.Windows.Forms.GroupBox();
+            this.button_Bokning_Boka = new System.Windows.Forms.Button();
+            this.button_Bokning_Avboka = new System.Windows.Forms.Button();
+            this.tabControl_Form1.SuspendLayout();
+            this.tabPage_Medlemmar.SuspendLayout();
             this.groupBox_Medlemsuppgifter.SuspendLayout();
             this.groupBox_Medlem.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tabPage_Schema.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Schema)).BeginInit();
+            this.tabPage_Instruktörer.SuspendLayout();
             this.groupBox_Instruktor_Lista.SuspendLayout();
             this.groupBox_Instruktor_.SuspendLayout();
+            this.tabPage_Bokning.SuspendLayout();
+            this.groupBox_Bokning_Medlemmar.SuspendLayout();
+            this.groupBox_Bokning_Aktiviteter.SuspendLayout();
+            this.groupBox_Bokningar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl_Form1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(925, 363);
-            this.tabControl1.TabIndex = 1;
+            this.tabControl_Form1.Controls.Add(this.tabPage_Medlemmar);
+            this.tabControl_Form1.Controls.Add(this.tabPage_Schema);
+            this.tabControl_Form1.Controls.Add(this.tabPage_Instruktörer);
+            this.tabControl_Form1.Controls.Add(this.tabPage_Bokning);
+            this.tabControl_Form1.Location = new System.Drawing.Point(12, 4);
+            this.tabControl_Form1.Name = "tabControl_Form1";
+            this.tabControl_Form1.SelectedIndex = 0;
+            this.tabControl_Form1.Size = new System.Drawing.Size(925, 363);
+            this.tabControl_Form1.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPage_Medlemmar
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage1.Controls.Add(this.groupBox_Medlemsuppgifter);
-            this.tabPage1.Controls.Add(this.groupBox_Medlem);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(917, 337);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Medlemmar";
+            this.tabPage_Medlemmar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage_Medlemmar.Controls.Add(this.groupBox_Medlemsuppgifter);
+            this.tabPage_Medlemmar.Controls.Add(this.groupBox_Medlem);
+            this.tabPage_Medlemmar.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Medlemmar.Name = "tabPage_Medlemmar";
+            this.tabPage_Medlemmar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Medlemmar.Size = new System.Drawing.Size(917, 337);
+            this.tabPage_Medlemmar.TabIndex = 0;
+            this.tabPage_Medlemmar.Text = "Medlemmar";
             // 
             // groupBox_Medlemsuppgifter
             // 
@@ -170,6 +194,7 @@
             this.button_Medlem_Tabort.TabIndex = 19;
             this.button_Medlem_Tabort.Text = "Ta bort";
             this.button_Medlem_Tabort.UseVisualStyleBackColor = true;
+            this.button_Medlem_Tabort.Click += new System.EventHandler(this.button_Medlem_Tabort_Click);
             // 
             // button_Medlem_Uppdatera
             // 
@@ -179,6 +204,7 @@
             this.button_Medlem_Uppdatera.TabIndex = 18;
             this.button_Medlem_Uppdatera.Text = "Uppdatera";
             this.button_Medlem_Uppdatera.UseVisualStyleBackColor = true;
+            this.button_Medlem_Uppdatera.Click += new System.EventHandler(this.button_Medlem_Uppdatera_Click);
             // 
             // label_Medlem_Giltig
             // 
@@ -204,6 +230,7 @@
             this.button_Medlem_Rensa.TabIndex = 14;
             this.button_Medlem_Rensa.Text = "Rensa";
             this.button_Medlem_Rensa.UseVisualStyleBackColor = true;
+            this.button_Medlem_Rensa.Click += new System.EventHandler(this.button_Medlem_Rensa_Click);
             // 
             // label_Medlem_Kort
             // 
@@ -315,6 +342,7 @@
             this.button_Medlem_Registrera.TabIndex = 0;
             this.button_Medlem_Registrera.Text = "Registrera";
             this.button_Medlem_Registrera.UseVisualStyleBackColor = true;
+            this.button_Medlem_Registrera.Click += new System.EventHandler(this.button_Medlem_Registrera_Click);
             // 
             // domainUpDown_Medlem_Typ
             // 
@@ -410,22 +438,33 @@
             this.listBox_Medlem.Name = "listBox_Medlem";
             this.listBox_Medlem.Size = new System.Drawing.Size(264, 186);
             this.listBox_Medlem.TabIndex = 0;
+            this.listBox_Medlem.SelectedIndexChanged += new System.EventHandler(this.listBox_Medlem_SelectedIndexChanged);
             // 
-            // tabPage2
+            // tabPage_Schema
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(917, 337);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Schema";
+            this.tabPage_Schema.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage_Schema.Controls.Add(this.dateTimePicker_Schema_Datum);
+            this.tabPage_Schema.Controls.Add(this.label_Schema_Instruktör);
+            this.tabPage_Schema.Controls.Add(this.label_Schema_Aktivitet);
+            this.tabPage_Schema.Controls.Add(this.label_Schema_Lokal);
+            this.tabPage_Schema.Controls.Add(this.label_Schema_Tid);
+            this.tabPage_Schema.Controls.Add(this.label_Schema_Datum);
+            this.tabPage_Schema.Controls.Add(this.domainUpDown_Schema_Instruktor);
+            this.tabPage_Schema.Controls.Add(this.domainUpDown_Schema_Aktivitet);
+            this.tabPage_Schema.Controls.Add(this.domainUpDown_Schema_Lokal);
+            this.tabPage_Schema.Controls.Add(this.domainUpDown_Schema_Tid);
+            this.tabPage_Schema.Controls.Add(this.dataGridView_Schema);
+            this.tabPage_Schema.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Schema.Name = "tabPage_Schema";
+            this.tabPage_Schema.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Schema.Size = new System.Drawing.Size(917, 337);
+            this.tabPage_Schema.TabIndex = 1;
+            this.tabPage_Schema.Text = "Schema";
             // 
-            // dataGridView1
+            // dataGridView_Schema
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_Schema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Schema.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Måndag,
             this.Tisdag,
             this.Onsdag,
@@ -433,10 +472,10 @@
             this.Fredag,
             this.Lördag,
             this.Söndag});
-            this.dataGridView1.Location = new System.Drawing.Point(99, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 258);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_Schema.Location = new System.Drawing.Point(99, 18);
+            this.dataGridView_Schema.Name = "dataGridView_Schema";
+            this.dataGridView_Schema.Size = new System.Drawing.Size(744, 234);
+            this.dataGridView_Schema.TabIndex = 0;
             // 
             // Måndag
             // 
@@ -473,17 +512,17 @@
             this.Söndag.HeaderText = "Söndag";
             this.Söndag.Name = "Söndag";
             // 
-            // tabPage3
+            // tabPage_Instruktörer
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage3.Controls.Add(this.groupBox_Instruktor_Lista);
-            this.tabPage3.Controls.Add(this.groupBox_Instruktor_);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(917, 337);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Instruktörer";
+            this.tabPage_Instruktörer.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage_Instruktörer.Controls.Add(this.groupBox_Instruktor_Lista);
+            this.tabPage_Instruktörer.Controls.Add(this.groupBox_Instruktor_);
+            this.tabPage_Instruktörer.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Instruktörer.Name = "tabPage_Instruktörer";
+            this.tabPage_Instruktörer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Instruktörer.Size = new System.Drawing.Size(917, 337);
+            this.tabPage_Instruktörer.TabIndex = 2;
+            this.tabPage_Instruktörer.Text = "Instruktörer";
             // 
             // groupBox_Instruktor_Lista
             // 
@@ -518,7 +557,7 @@
             this.groupBox_Instruktor_.Controls.Add(this.label_Instruktor_Telefonnummer);
             this.groupBox_Instruktor_.Controls.Add(this.button_Instruktor_LaggTill);
             this.groupBox_Instruktor_.Controls.Add(this.textBox_Instruktor_Telefonnummer);
-            this.groupBox_Instruktor_.Controls.Add(this.textBox_Tranare_Mailadress);
+            this.groupBox_Instruktor_.Controls.Add(this.textBox_Instruktor_Mailadress);
             this.groupBox_Instruktor_.Controls.Add(this.textBox_Instruktor_Ort);
             this.groupBox_Instruktor_.Controls.Add(this.textBox_Instruktor_Personnummer);
             this.groupBox_Instruktor_.Controls.Add(this.textBox_Instruktor_Postnummer);
@@ -647,12 +686,12 @@
             this.textBox_Instruktor_Telefonnummer.Size = new System.Drawing.Size(100, 20);
             this.textBox_Instruktor_Telefonnummer.TabIndex = 9;
             // 
-            // textBox_Tranare_Mailadress
+            // textBox_Instruktor_Mailadress
             // 
-            this.textBox_Tranare_Mailadress.Location = new System.Drawing.Point(6, 182);
-            this.textBox_Tranare_Mailadress.Name = "textBox_Tranare_Mailadress";
-            this.textBox_Tranare_Mailadress.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Tranare_Mailadress.TabIndex = 8;
+            this.textBox_Instruktor_Mailadress.Location = new System.Drawing.Point(6, 182);
+            this.textBox_Instruktor_Mailadress.Name = "textBox_Instruktor_Mailadress";
+            this.textBox_Instruktor_Mailadress.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Instruktor_Mailadress.TabIndex = 8;
             // 
             // textBox_Instruktor_Ort
             // 
@@ -696,34 +735,209 @@
             this.textBox_Instruktor_Efternamn.Size = new System.Drawing.Size(100, 20);
             this.textBox_Instruktor_Efternamn.TabIndex = 4;
             // 
+            // domainUpDown_Schema_Tid
+            // 
+            this.domainUpDown_Schema_Tid.Location = new System.Drawing.Point(305, 279);
+            this.domainUpDown_Schema_Tid.Name = "domainUpDown_Schema_Tid";
+            this.domainUpDown_Schema_Tid.Size = new System.Drawing.Size(95, 20);
+            this.domainUpDown_Schema_Tid.TabIndex = 2;
+            this.domainUpDown_Schema_Tid.Text = "domainUpDown2";
+            // 
+            // domainUpDown_Schema_Lokal
+            // 
+            this.domainUpDown_Schema_Lokal.Location = new System.Drawing.Point(419, 279);
+            this.domainUpDown_Schema_Lokal.Name = "domainUpDown_Schema_Lokal";
+            this.domainUpDown_Schema_Lokal.Size = new System.Drawing.Size(90, 20);
+            this.domainUpDown_Schema_Lokal.TabIndex = 3;
+            this.domainUpDown_Schema_Lokal.Text = "domainUpDown3";
+            // 
+            // domainUpDown_Schema_Aktivitet
+            // 
+            this.domainUpDown_Schema_Aktivitet.Location = new System.Drawing.Point(576, 279);
+            this.domainUpDown_Schema_Aktivitet.Name = "domainUpDown_Schema_Aktivitet";
+            this.domainUpDown_Schema_Aktivitet.Size = new System.Drawing.Size(120, 20);
+            this.domainUpDown_Schema_Aktivitet.TabIndex = 4;
+            this.domainUpDown_Schema_Aktivitet.Text = "domainUpDown4";
+            // 
+            // domainUpDown_Schema_Instruktor
+            // 
+            this.domainUpDown_Schema_Instruktor.Location = new System.Drawing.Point(723, 279);
+            this.domainUpDown_Schema_Instruktor.Name = "domainUpDown_Schema_Instruktor";
+            this.domainUpDown_Schema_Instruktor.Size = new System.Drawing.Size(120, 20);
+            this.domainUpDown_Schema_Instruktor.TabIndex = 5;
+            this.domainUpDown_Schema_Instruktor.Text = "domainUpDown5";
+            // 
+            // label_Schema_Datum
+            // 
+            this.label_Schema_Datum.AutoSize = true;
+            this.label_Schema_Datum.Location = new System.Drawing.Point(99, 260);
+            this.label_Schema_Datum.Name = "label_Schema_Datum";
+            this.label_Schema_Datum.Size = new System.Drawing.Size(38, 13);
+            this.label_Schema_Datum.TabIndex = 6;
+            this.label_Schema_Datum.Text = "Datum";
+            // 
+            // label_Schema_Tid
+            // 
+            this.label_Schema_Tid.AutoSize = true;
+            this.label_Schema_Tid.Location = new System.Drawing.Point(302, 260);
+            this.label_Schema_Tid.Name = "label_Schema_Tid";
+            this.label_Schema_Tid.Size = new System.Drawing.Size(22, 13);
+            this.label_Schema_Tid.TabIndex = 7;
+            this.label_Schema_Tid.Text = "Tid";
+            // 
+            // label_Schema_Lokal
+            // 
+            this.label_Schema_Lokal.AutoSize = true;
+            this.label_Schema_Lokal.Location = new System.Drawing.Point(416, 260);
+            this.label_Schema_Lokal.Name = "label_Schema_Lokal";
+            this.label_Schema_Lokal.Size = new System.Drawing.Size(33, 13);
+            this.label_Schema_Lokal.TabIndex = 8;
+            this.label_Schema_Lokal.Text = "Lokal";
+            // 
+            // label_Schema_Aktivitet
+            // 
+            this.label_Schema_Aktivitet.AutoSize = true;
+            this.label_Schema_Aktivitet.Location = new System.Drawing.Point(573, 260);
+            this.label_Schema_Aktivitet.Name = "label_Schema_Aktivitet";
+            this.label_Schema_Aktivitet.Size = new System.Drawing.Size(45, 13);
+            this.label_Schema_Aktivitet.TabIndex = 9;
+            this.label_Schema_Aktivitet.Text = "Aktivitet";
+            // 
+            // label_Schema_Instruktör
+            // 
+            this.label_Schema_Instruktör.AutoSize = true;
+            this.label_Schema_Instruktör.Location = new System.Drawing.Point(720, 260);
+            this.label_Schema_Instruktör.Name = "label_Schema_Instruktör";
+            this.label_Schema_Instruktör.Size = new System.Drawing.Size(51, 13);
+            this.label_Schema_Instruktör.TabIndex = 10;
+            this.label_Schema_Instruktör.Text = "Instruktör";
+            // 
+            // dateTimePicker_Schema_Datum
+            // 
+            this.dateTimePicker_Schema_Datum.Location = new System.Drawing.Point(99, 279);
+            this.dateTimePicker_Schema_Datum.Name = "dateTimePicker_Schema_Datum";
+            this.dateTimePicker_Schema_Datum.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_Schema_Datum.TabIndex = 11;
+            // 
+            // tabPage_Bokning
+            // 
+            this.tabPage_Bokning.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage_Bokning.Controls.Add(this.button_Bokning_Avboka);
+            this.tabPage_Bokning.Controls.Add(this.button_Bokning_Boka);
+            this.tabPage_Bokning.Controls.Add(this.groupBox_Bokningar);
+            this.tabPage_Bokning.Controls.Add(this.groupBox_Bokning_Aktiviteter);
+            this.tabPage_Bokning.Controls.Add(this.groupBox_Bokning_Medlemmar);
+            this.tabPage_Bokning.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Bokning.Name = "tabPage_Bokning";
+            this.tabPage_Bokning.Size = new System.Drawing.Size(917, 337);
+            this.tabPage_Bokning.TabIndex = 3;
+            this.tabPage_Bokning.Text = "Bokning";
+            // 
+            // listBox_Bokningar
+            // 
+            this.listBox_Bokningar.FormattingEnabled = true;
+            this.listBox_Bokningar.Location = new System.Drawing.Point(10, 14);
+            this.listBox_Bokningar.Name = "listBox_Bokningar";
+            this.listBox_Bokningar.Size = new System.Drawing.Size(571, 121);
+            this.listBox_Bokningar.TabIndex = 2;
+            // 
+            // groupBox_Bokning_Medlemmar
+            // 
+            this.groupBox_Bokning_Medlemmar.Controls.Add(this.listBox_Bokning_Medlem);
+            this.groupBox_Bokning_Medlemmar.Location = new System.Drawing.Point(137, 14);
+            this.groupBox_Bokning_Medlemmar.Name = "groupBox_Bokning_Medlemmar";
+            this.groupBox_Bokning_Medlemmar.Size = new System.Drawing.Size(201, 177);
+            this.groupBox_Bokning_Medlemmar.TabIndex = 3;
+            this.groupBox_Bokning_Medlemmar.TabStop = false;
+            this.groupBox_Bokning_Medlemmar.Text = "Medlemmar";
+            // 
+            // listBox_Bokning_Medlem
+            // 
+            this.listBox_Bokning_Medlem.FormattingEnabled = true;
+            this.listBox_Bokning_Medlem.Location = new System.Drawing.Point(7, 20);
+            this.listBox_Bokning_Medlem.Name = "listBox_Bokning_Medlem";
+            this.listBox_Bokning_Medlem.Size = new System.Drawing.Size(181, 147);
+            this.listBox_Bokning_Medlem.TabIndex = 0;
+            // 
+            // groupBox_Bokning_Aktiviteter
+            // 
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.listBox_Bokning_Traningspass);
+            this.groupBox_Bokning_Aktiviteter.Location = new System.Drawing.Point(344, 14);
+            this.groupBox_Bokning_Aktiviteter.Name = "groupBox_Bokning_Aktiviteter";
+            this.groupBox_Bokning_Aktiviteter.Size = new System.Drawing.Size(386, 177);
+            this.groupBox_Bokning_Aktiviteter.TabIndex = 4;
+            this.groupBox_Bokning_Aktiviteter.TabStop = false;
+            this.groupBox_Bokning_Aktiviteter.Text = "Träningspass";
+            // 
+            // listBox_Bokning_Traningspass
+            // 
+            this.listBox_Bokning_Traningspass.FormattingEnabled = true;
+            this.listBox_Bokning_Traningspass.Location = new System.Drawing.Point(7, 20);
+            this.listBox_Bokning_Traningspass.Name = "listBox_Bokning_Traningspass";
+            this.listBox_Bokning_Traningspass.Size = new System.Drawing.Size(367, 147);
+            this.listBox_Bokning_Traningspass.TabIndex = 0;
+            // 
+            // groupBox_Bokningar
+            // 
+            this.groupBox_Bokningar.Controls.Add(this.listBox_Bokningar);
+            this.groupBox_Bokningar.Location = new System.Drawing.Point(137, 197);
+            this.groupBox_Bokningar.Name = "groupBox_Bokningar";
+            this.groupBox_Bokningar.Size = new System.Drawing.Size(587, 135);
+            this.groupBox_Bokningar.TabIndex = 5;
+            this.groupBox_Bokningar.TabStop = false;
+            this.groupBox_Bokningar.Text = "Bokningar";
+            // 
+            // button_Bokning_Boka
+            // 
+            this.button_Bokning_Boka.Location = new System.Drawing.Point(779, 34);
+            this.button_Bokning_Boka.Name = "button_Bokning_Boka";
+            this.button_Bokning_Boka.Size = new System.Drawing.Size(75, 23);
+            this.button_Bokning_Boka.TabIndex = 6;
+            this.button_Bokning_Boka.Text = "Boka";
+            this.button_Bokning_Boka.UseVisualStyleBackColor = true;
+            // 
+            // button_Bokning_Avboka
+            // 
+            this.button_Bokning_Avboka.Location = new System.Drawing.Point(779, 211);
+            this.button_Bokning_Avboka.Name = "button_Bokning_Avboka";
+            this.button_Bokning_Avboka.Size = new System.Drawing.Size(75, 23);
+            this.button_Bokning_Avboka.TabIndex = 7;
+            this.button_Bokning_Avboka.Text = "Avboka";
+            this.button_Bokning_Avboka.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 370);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl_Form1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabControl_Form1.ResumeLayout(false);
+            this.tabPage_Medlemmar.ResumeLayout(false);
             this.groupBox_Medlemsuppgifter.ResumeLayout(false);
             this.groupBox_Medlemsuppgifter.PerformLayout();
             this.groupBox_Medlem.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
+            this.tabPage_Schema.ResumeLayout(false);
+            this.tabPage_Schema.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Schema)).EndInit();
+            this.tabPage_Instruktörer.ResumeLayout(false);
             this.groupBox_Instruktor_Lista.ResumeLayout(false);
             this.groupBox_Instruktor_.ResumeLayout(false);
             this.groupBox_Instruktor_.PerformLayout();
+            this.tabPage_Bokning.ResumeLayout(false);
+            this.groupBox_Bokning_Medlemmar.ResumeLayout(false);
+            this.groupBox_Bokning_Aktiviteter.ResumeLayout(false);
+            this.groupBox_Bokningar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabControl_Form1;
+        private System.Windows.Forms.TabPage tabPage_Medlemmar;
         private System.Windows.Forms.GroupBox groupBox_Medlemsuppgifter;
         private System.Windows.Forms.Button button_Medlem_Tabort;
         private System.Windows.Forms.Button button_Medlem_Uppdatera;
@@ -754,8 +968,8 @@
         private System.Windows.Forms.GroupBox groupBox_Medlem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox_Medlem;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tabPage_Schema;
+        private System.Windows.Forms.DataGridView dataGridView_Schema;
         private System.Windows.Forms.DataGridViewTextBoxColumn Måndag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tisdag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Onsdag;
@@ -763,7 +977,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fredag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lördag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Söndag;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage_Instruktörer;
         private System.Windows.Forms.GroupBox groupBox_Instruktor_Lista;
         private System.Windows.Forms.ListBox listBox_Instruktor;
         private System.Windows.Forms.GroupBox groupBox_Instruktor_;
@@ -780,13 +994,32 @@
         private System.Windows.Forms.Label label_Instruktor_Telefonnummer;
         private System.Windows.Forms.Button button_Instruktor_LaggTill;
         private System.Windows.Forms.TextBox textBox_Instruktor_Telefonnummer;
-        private System.Windows.Forms.TextBox textBox_Tranare_Mailadress;
+        private System.Windows.Forms.TextBox textBox_Instruktor_Mailadress;
         private System.Windows.Forms.TextBox textBox_Instruktor_Ort;
         private System.Windows.Forms.TextBox textBox_Instruktor_Personnummer;
         private System.Windows.Forms.TextBox textBox_Instruktor_Postnummer;
         private System.Windows.Forms.TextBox textBox_Instruktor_Fornamn;
         private System.Windows.Forms.TextBox textBox_Instruktor_Gatuadress;
         private System.Windows.Forms.TextBox textBox_Instruktor_Efternamn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Schema_Datum;
+        private System.Windows.Forms.Label label_Schema_Instruktör;
+        private System.Windows.Forms.Label label_Schema_Aktivitet;
+        private System.Windows.Forms.Label label_Schema_Lokal;
+        private System.Windows.Forms.Label label_Schema_Tid;
+        private System.Windows.Forms.Label label_Schema_Datum;
+        private System.Windows.Forms.DomainUpDown domainUpDown_Schema_Instruktor;
+        private System.Windows.Forms.DomainUpDown domainUpDown_Schema_Aktivitet;
+        private System.Windows.Forms.DomainUpDown domainUpDown_Schema_Lokal;
+        private System.Windows.Forms.DomainUpDown domainUpDown_Schema_Tid;
+        private System.Windows.Forms.TabPage tabPage_Bokning;
+        private System.Windows.Forms.Button button_Bokning_Avboka;
+        private System.Windows.Forms.Button button_Bokning_Boka;
+        private System.Windows.Forms.GroupBox groupBox_Bokningar;
+        private System.Windows.Forms.ListBox listBox_Bokningar;
+        private System.Windows.Forms.GroupBox groupBox_Bokning_Aktiviteter;
+        private System.Windows.Forms.ListBox listBox_Bokning_Traningspass;
+        private System.Windows.Forms.GroupBox groupBox_Bokning_Medlemmar;
+        private System.Windows.Forms.ListBox listBox_Bokning_Medlem;
     }
 }
 
