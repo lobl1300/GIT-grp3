@@ -29,10 +29,12 @@ namespace Gymverksamhet_G3
             Uppdatera_Medlemslista();       //möjlig bugg gör det svårt att öppna connection via denna metodreferens vid programstart
             //listBox_Medlem.DataSource = Databasfunktioner.GetMedlemmar();
             Uppdatera_Instruktorslista();
+            Uppdatera_Aktivitetslista();
         }
         private void Uppdatera_Medlemslista()
         {
             listBox_Medlem.DataSource = Databasfunktioner.GetMedlemmar();
+            listBox_Bokning_Medlem.DataSource = Databasfunktioner.GetMedlemmar();
         }
         private void Rensa_Textboxar_Medlem()
         {
@@ -58,6 +60,10 @@ namespace Gymverksamhet_G3
             textBox_Instruktor_Gatuadress.Clear();
             textBox_Instruktor_Mailadress.Clear();
             textBox_Instruktor_Telefonnummer.Clear();
+        }
+        private void Uppdatera_Aktivitetslista()
+        {
+            listBox_Bokning_Aktivitet.DataSource = Databasfunktioner.GetAktivitet();
         }
 
 

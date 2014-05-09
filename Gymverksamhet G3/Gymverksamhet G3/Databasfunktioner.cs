@@ -370,6 +370,34 @@ namespace Gymverksamhet_G3
 
             return bokningslista;
         }
+        //************************************************************************************************************************
+        //*************************************************************************************************************************
+        //Aktivitet
+
+        public static BindingList<Aktivitet> GetAktivitet()
+        {
+            BindingList<Aktivitet> aktivitetslista = new BindingList<Aktivitet>();
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
+            NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
+            conn.Open();
+            NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM aktivitet order by passnummer", conn);
+            NpgsqlDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                Aktivitet aktivitet = new Aktivitet
+                {
+                    Passnummer = (string)dr["passnummer"],
+                    Tidsperiod = (string)dr["tidsperiod"],
+                    Ledande_Instruktor = (string)dr["ledande_instruktor"],
+                    Traningstyp = (string)dr["traningstyp"],
+                    Lokal = (int)dr["lokal"]
+                };
+                aktivitetslista.Add(aktivitet);
+            }
+            conn.Close();
+
+            return aktivitetslista;
+        }
 
 
 

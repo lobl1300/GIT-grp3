@@ -10,12 +10,15 @@ namespace Gymverksamhet_G3
     {
         //PROPERTIES
         public string Passnummer { get; set; }
-        public DateTime Tidsperiod { get; set; }
+        public string Tidsperiod { get; set; } //gjorde om från DateTime till string för test
         public string Ledande_Instruktor { get; set; }
         public string Traningstyp { get; set; }
-        public string Lokal { get; set; }
+        public int Lokal { get; set; }
 
         //METODER
-
+        public override string ToString()
+        {
+            return Passnummer + "\t" + Tidsperiod + "\t" + Ledande_Instruktor + "\t" + Traningstyp + "\t" + Lokal;
+        }
     }
 }

@@ -107,7 +107,7 @@
             this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
             this.groupBox_Bokning_Aktiviteter = new System.Windows.Forms.GroupBox();
-            this.listBox_Bokning_Traningspass = new System.Windows.Forms.ListBox();
+            this.listBox_Bokning_Aktivitet = new System.Windows.Forms.ListBox();
             this.groupBox_Bokningar = new System.Windows.Forms.GroupBox();
             this.button_Bokning_Boka = new System.Windows.Forms.Button();
             this.button_Bokning_Avboka = new System.Windows.Forms.Button();
@@ -843,7 +843,7 @@
             this.groupBox_Bokning_Medlemmar.Size = new System.Drawing.Size(201, 177);
             this.groupBox_Bokning_Medlemmar.TabIndex = 3;
             this.groupBox_Bokning_Medlemmar.TabStop = false;
-            this.groupBox_Bokning_Medlemmar.Text = "Medlemmar";
+            this.groupBox_Bokning_Medlemmar.Text = "Medlemslista";
             // 
             // listBox_Bokning_Medlem
             // 
@@ -855,7 +855,7 @@
             // 
             // groupBox_Bokning_Aktiviteter
             // 
-            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.listBox_Bokning_Traningspass);
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.listBox_Bokning_Aktivitet);
             this.groupBox_Bokning_Aktiviteter.Location = new System.Drawing.Point(344, 14);
             this.groupBox_Bokning_Aktiviteter.Name = "groupBox_Bokning_Aktiviteter";
             this.groupBox_Bokning_Aktiviteter.Size = new System.Drawing.Size(386, 177);
@@ -863,13 +863,13 @@
             this.groupBox_Bokning_Aktiviteter.TabStop = false;
             this.groupBox_Bokning_Aktiviteter.Text = "Träningspass";
             // 
-            // listBox_Bokning_Traningspass
+            // listBox_Bokning_Aktivitet
             // 
-            this.listBox_Bokning_Traningspass.FormattingEnabled = true;
-            this.listBox_Bokning_Traningspass.Location = new System.Drawing.Point(7, 20);
-            this.listBox_Bokning_Traningspass.Name = "listBox_Bokning_Traningspass";
-            this.listBox_Bokning_Traningspass.Size = new System.Drawing.Size(367, 147);
-            this.listBox_Bokning_Traningspass.TabIndex = 0;
+            this.listBox_Bokning_Aktivitet.FormattingEnabled = true;
+            this.listBox_Bokning_Aktivitet.Location = new System.Drawing.Point(7, 20);
+            this.listBox_Bokning_Aktivitet.Name = "listBox_Bokning_Aktivitet";
+            this.listBox_Bokning_Aktivitet.Size = new System.Drawing.Size(367, 147);
+            this.listBox_Bokning_Aktivitet.TabIndex = 0;
             // 
             // groupBox_Bokningar
             // 
@@ -1010,7 +1010,7 @@
         private System.Windows.Forms.GroupBox groupBox_Bokningar;
         private System.Windows.Forms.ListBox listBox_Bokningar;
         private System.Windows.Forms.GroupBox groupBox_Bokning_Aktiviteter;
-        private System.Windows.Forms.ListBox listBox_Bokning_Traningspass;
+        private System.Windows.Forms.ListBox listBox_Bokning_Aktivitet;
         private System.Windows.Forms.GroupBox groupBox_Bokning_Medlemmar;
         private System.Windows.Forms.ListBox listBox_Bokning_Medlem;
     }
