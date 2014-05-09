@@ -60,6 +60,16 @@
             this.groupBox_Medlem = new System.Windows.Forms.GroupBox();
             this.listBox_Medlem = new System.Windows.Forms.ListBox();
             this.tabPage_Schema = new System.Windows.Forms.TabPage();
+            this.dateTimePicker_Schema_Datum = new System.Windows.Forms.DateTimePicker();
+            this.label_Schema_Instruktör = new System.Windows.Forms.Label();
+            this.label_Schema_Aktivitet = new System.Windows.Forms.Label();
+            this.label_Schema_Lokal = new System.Windows.Forms.Label();
+            this.label_Schema_Tid = new System.Windows.Forms.Label();
+            this.label_Schema_Datum = new System.Windows.Forms.Label();
+            this.domainUpDown_Schema_Instruktor = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown_Schema_Aktivitet = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown_Schema_Lokal = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown_Schema_Tid = new System.Windows.Forms.DomainUpDown();
             this.dataGridView_Schema = new System.Windows.Forms.DataGridView();
             this.Måndag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tisdag = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,25 +102,15 @@
             this.textBox_Instruktor_Fornamn = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Gatuadress = new System.Windows.Forms.TextBox();
             this.textBox_Instruktor_Efternamn = new System.Windows.Forms.TextBox();
-            this.domainUpDown_Schema_Tid = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown_Schema_Lokal = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown_Schema_Aktivitet = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown_Schema_Instruktor = new System.Windows.Forms.DomainUpDown();
-            this.label_Schema_Datum = new System.Windows.Forms.Label();
-            this.label_Schema_Tid = new System.Windows.Forms.Label();
-            this.label_Schema_Lokal = new System.Windows.Forms.Label();
-            this.label_Schema_Aktivitet = new System.Windows.Forms.Label();
-            this.label_Schema_Instruktör = new System.Windows.Forms.Label();
-            this.dateTimePicker_Schema_Datum = new System.Windows.Forms.DateTimePicker();
             this.tabPage_Bokning = new System.Windows.Forms.TabPage();
+            this.button_Bokning_Avboka = new System.Windows.Forms.Button();
+            this.button_Bokning_Boka = new System.Windows.Forms.Button();
+            this.groupBox_Bokningar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokningar = new System.Windows.Forms.ListBox();
-            this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
-            this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
             this.groupBox_Bokning_Aktiviteter = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Aktivitet = new System.Windows.Forms.ListBox();
-            this.groupBox_Bokningar = new System.Windows.Forms.GroupBox();
-            this.button_Bokning_Boka = new System.Windows.Forms.Button();
-            this.button_Bokning_Avboka = new System.Windows.Forms.Button();
+            this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
+            this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
             this.tabControl_Form1.SuspendLayout();
             this.tabPage_Medlemmar.SuspendLayout();
             this.groupBox_Medlemsuppgifter.SuspendLayout();
@@ -121,9 +121,9 @@
             this.groupBox_Instruktor_Lista.SuspendLayout();
             this.groupBox_Instruktor_.SuspendLayout();
             this.tabPage_Bokning.SuspendLayout();
-            this.groupBox_Bokning_Medlemmar.SuspendLayout();
-            this.groupBox_Bokning_Aktiviteter.SuspendLayout();
             this.groupBox_Bokningar.SuspendLayout();
+            this.groupBox_Bokning_Aktiviteter.SuspendLayout();
+            this.groupBox_Bokning_Medlemmar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_Form1
@@ -450,6 +450,90 @@
             this.tabPage_Schema.TabIndex = 1;
             this.tabPage_Schema.Text = "Schema";
             // 
+            // dateTimePicker_Schema_Datum
+            // 
+            this.dateTimePicker_Schema_Datum.Location = new System.Drawing.Point(99, 279);
+            this.dateTimePicker_Schema_Datum.Name = "dateTimePicker_Schema_Datum";
+            this.dateTimePicker_Schema_Datum.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_Schema_Datum.TabIndex = 11;
+            // 
+            // label_Schema_Instruktör
+            // 
+            this.label_Schema_Instruktör.AutoSize = true;
+            this.label_Schema_Instruktör.Location = new System.Drawing.Point(720, 260);
+            this.label_Schema_Instruktör.Name = "label_Schema_Instruktör";
+            this.label_Schema_Instruktör.Size = new System.Drawing.Size(51, 13);
+            this.label_Schema_Instruktör.TabIndex = 10;
+            this.label_Schema_Instruktör.Text = "Instruktör";
+            // 
+            // label_Schema_Aktivitet
+            // 
+            this.label_Schema_Aktivitet.AutoSize = true;
+            this.label_Schema_Aktivitet.Location = new System.Drawing.Point(573, 260);
+            this.label_Schema_Aktivitet.Name = "label_Schema_Aktivitet";
+            this.label_Schema_Aktivitet.Size = new System.Drawing.Size(45, 13);
+            this.label_Schema_Aktivitet.TabIndex = 9;
+            this.label_Schema_Aktivitet.Text = "Aktivitet";
+            // 
+            // label_Schema_Lokal
+            // 
+            this.label_Schema_Lokal.AutoSize = true;
+            this.label_Schema_Lokal.Location = new System.Drawing.Point(416, 260);
+            this.label_Schema_Lokal.Name = "label_Schema_Lokal";
+            this.label_Schema_Lokal.Size = new System.Drawing.Size(33, 13);
+            this.label_Schema_Lokal.TabIndex = 8;
+            this.label_Schema_Lokal.Text = "Lokal";
+            // 
+            // label_Schema_Tid
+            // 
+            this.label_Schema_Tid.AutoSize = true;
+            this.label_Schema_Tid.Location = new System.Drawing.Point(302, 260);
+            this.label_Schema_Tid.Name = "label_Schema_Tid";
+            this.label_Schema_Tid.Size = new System.Drawing.Size(22, 13);
+            this.label_Schema_Tid.TabIndex = 7;
+            this.label_Schema_Tid.Text = "Tid";
+            // 
+            // label_Schema_Datum
+            // 
+            this.label_Schema_Datum.AutoSize = true;
+            this.label_Schema_Datum.Location = new System.Drawing.Point(99, 260);
+            this.label_Schema_Datum.Name = "label_Schema_Datum";
+            this.label_Schema_Datum.Size = new System.Drawing.Size(38, 13);
+            this.label_Schema_Datum.TabIndex = 6;
+            this.label_Schema_Datum.Text = "Datum";
+            // 
+            // domainUpDown_Schema_Instruktor
+            // 
+            this.domainUpDown_Schema_Instruktor.Location = new System.Drawing.Point(723, 279);
+            this.domainUpDown_Schema_Instruktor.Name = "domainUpDown_Schema_Instruktor";
+            this.domainUpDown_Schema_Instruktor.Size = new System.Drawing.Size(120, 20);
+            this.domainUpDown_Schema_Instruktor.TabIndex = 5;
+            this.domainUpDown_Schema_Instruktor.Text = "domainUpDown5";
+            // 
+            // domainUpDown_Schema_Aktivitet
+            // 
+            this.domainUpDown_Schema_Aktivitet.Location = new System.Drawing.Point(576, 279);
+            this.domainUpDown_Schema_Aktivitet.Name = "domainUpDown_Schema_Aktivitet";
+            this.domainUpDown_Schema_Aktivitet.Size = new System.Drawing.Size(120, 20);
+            this.domainUpDown_Schema_Aktivitet.TabIndex = 4;
+            this.domainUpDown_Schema_Aktivitet.Text = "domainUpDown4";
+            // 
+            // domainUpDown_Schema_Lokal
+            // 
+            this.domainUpDown_Schema_Lokal.Location = new System.Drawing.Point(419, 279);
+            this.domainUpDown_Schema_Lokal.Name = "domainUpDown_Schema_Lokal";
+            this.domainUpDown_Schema_Lokal.Size = new System.Drawing.Size(90, 20);
+            this.domainUpDown_Schema_Lokal.TabIndex = 3;
+            this.domainUpDown_Schema_Lokal.Text = "domainUpDown3";
+            // 
+            // domainUpDown_Schema_Tid
+            // 
+            this.domainUpDown_Schema_Tid.Location = new System.Drawing.Point(305, 279);
+            this.domainUpDown_Schema_Tid.Name = "domainUpDown_Schema_Tid";
+            this.domainUpDown_Schema_Tid.Size = new System.Drawing.Size(95, 20);
+            this.domainUpDown_Schema_Tid.TabIndex = 2;
+            this.domainUpDown_Schema_Tid.Text = "domainUpDown2";
+            // 
             // dataGridView_Schema
             // 
             this.dataGridView_Schema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -729,90 +813,6 @@
             this.textBox_Instruktor_Efternamn.Size = new System.Drawing.Size(100, 20);
             this.textBox_Instruktor_Efternamn.TabIndex = 4;
             // 
-            // domainUpDown_Schema_Tid
-            // 
-            this.domainUpDown_Schema_Tid.Location = new System.Drawing.Point(305, 279);
-            this.domainUpDown_Schema_Tid.Name = "domainUpDown_Schema_Tid";
-            this.domainUpDown_Schema_Tid.Size = new System.Drawing.Size(95, 20);
-            this.domainUpDown_Schema_Tid.TabIndex = 2;
-            this.domainUpDown_Schema_Tid.Text = "domainUpDown2";
-            // 
-            // domainUpDown_Schema_Lokal
-            // 
-            this.domainUpDown_Schema_Lokal.Location = new System.Drawing.Point(419, 279);
-            this.domainUpDown_Schema_Lokal.Name = "domainUpDown_Schema_Lokal";
-            this.domainUpDown_Schema_Lokal.Size = new System.Drawing.Size(90, 20);
-            this.domainUpDown_Schema_Lokal.TabIndex = 3;
-            this.domainUpDown_Schema_Lokal.Text = "domainUpDown3";
-            // 
-            // domainUpDown_Schema_Aktivitet
-            // 
-            this.domainUpDown_Schema_Aktivitet.Location = new System.Drawing.Point(576, 279);
-            this.domainUpDown_Schema_Aktivitet.Name = "domainUpDown_Schema_Aktivitet";
-            this.domainUpDown_Schema_Aktivitet.Size = new System.Drawing.Size(120, 20);
-            this.domainUpDown_Schema_Aktivitet.TabIndex = 4;
-            this.domainUpDown_Schema_Aktivitet.Text = "domainUpDown4";
-            // 
-            // domainUpDown_Schema_Instruktor
-            // 
-            this.domainUpDown_Schema_Instruktor.Location = new System.Drawing.Point(723, 279);
-            this.domainUpDown_Schema_Instruktor.Name = "domainUpDown_Schema_Instruktor";
-            this.domainUpDown_Schema_Instruktor.Size = new System.Drawing.Size(120, 20);
-            this.domainUpDown_Schema_Instruktor.TabIndex = 5;
-            this.domainUpDown_Schema_Instruktor.Text = "domainUpDown5";
-            // 
-            // label_Schema_Datum
-            // 
-            this.label_Schema_Datum.AutoSize = true;
-            this.label_Schema_Datum.Location = new System.Drawing.Point(99, 260);
-            this.label_Schema_Datum.Name = "label_Schema_Datum";
-            this.label_Schema_Datum.Size = new System.Drawing.Size(38, 13);
-            this.label_Schema_Datum.TabIndex = 6;
-            this.label_Schema_Datum.Text = "Datum";
-            // 
-            // label_Schema_Tid
-            // 
-            this.label_Schema_Tid.AutoSize = true;
-            this.label_Schema_Tid.Location = new System.Drawing.Point(302, 260);
-            this.label_Schema_Tid.Name = "label_Schema_Tid";
-            this.label_Schema_Tid.Size = new System.Drawing.Size(22, 13);
-            this.label_Schema_Tid.TabIndex = 7;
-            this.label_Schema_Tid.Text = "Tid";
-            // 
-            // label_Schema_Lokal
-            // 
-            this.label_Schema_Lokal.AutoSize = true;
-            this.label_Schema_Lokal.Location = new System.Drawing.Point(416, 260);
-            this.label_Schema_Lokal.Name = "label_Schema_Lokal";
-            this.label_Schema_Lokal.Size = new System.Drawing.Size(33, 13);
-            this.label_Schema_Lokal.TabIndex = 8;
-            this.label_Schema_Lokal.Text = "Lokal";
-            // 
-            // label_Schema_Aktivitet
-            // 
-            this.label_Schema_Aktivitet.AutoSize = true;
-            this.label_Schema_Aktivitet.Location = new System.Drawing.Point(573, 260);
-            this.label_Schema_Aktivitet.Name = "label_Schema_Aktivitet";
-            this.label_Schema_Aktivitet.Size = new System.Drawing.Size(45, 13);
-            this.label_Schema_Aktivitet.TabIndex = 9;
-            this.label_Schema_Aktivitet.Text = "Aktivitet";
-            // 
-            // label_Schema_Instruktör
-            // 
-            this.label_Schema_Instruktör.AutoSize = true;
-            this.label_Schema_Instruktör.Location = new System.Drawing.Point(720, 260);
-            this.label_Schema_Instruktör.Name = "label_Schema_Instruktör";
-            this.label_Schema_Instruktör.Size = new System.Drawing.Size(51, 13);
-            this.label_Schema_Instruktör.TabIndex = 10;
-            this.label_Schema_Instruktör.Text = "Instruktör";
-            // 
-            // dateTimePicker_Schema_Datum
-            // 
-            this.dateTimePicker_Schema_Datum.Location = new System.Drawing.Point(99, 279);
-            this.dateTimePicker_Schema_Datum.Name = "dateTimePicker_Schema_Datum";
-            this.dateTimePicker_Schema_Datum.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_Schema_Datum.TabIndex = 11;
-            // 
             // tabPage_Bokning
             // 
             this.tabPage_Bokning.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -827,6 +827,34 @@
             this.tabPage_Bokning.TabIndex = 3;
             this.tabPage_Bokning.Text = "Bokning";
             // 
+            // button_Bokning_Avboka
+            // 
+            this.button_Bokning_Avboka.Location = new System.Drawing.Point(779, 211);
+            this.button_Bokning_Avboka.Name = "button_Bokning_Avboka";
+            this.button_Bokning_Avboka.Size = new System.Drawing.Size(75, 23);
+            this.button_Bokning_Avboka.TabIndex = 7;
+            this.button_Bokning_Avboka.Text = "Avboka";
+            this.button_Bokning_Avboka.UseVisualStyleBackColor = true;
+            // 
+            // button_Bokning_Boka
+            // 
+            this.button_Bokning_Boka.Location = new System.Drawing.Point(814, 34);
+            this.button_Bokning_Boka.Name = "button_Bokning_Boka";
+            this.button_Bokning_Boka.Size = new System.Drawing.Size(75, 23);
+            this.button_Bokning_Boka.TabIndex = 6;
+            this.button_Bokning_Boka.Text = "Boka";
+            this.button_Bokning_Boka.UseVisualStyleBackColor = true;
+            // 
+            // groupBox_Bokningar
+            // 
+            this.groupBox_Bokningar.Controls.Add(this.listBox_Bokningar);
+            this.groupBox_Bokningar.Location = new System.Drawing.Point(137, 197);
+            this.groupBox_Bokningar.Name = "groupBox_Bokningar";
+            this.groupBox_Bokningar.Size = new System.Drawing.Size(587, 135);
+            this.groupBox_Bokningar.TabIndex = 5;
+            this.groupBox_Bokningar.TabStop = false;
+            this.groupBox_Bokningar.Text = "Bokningar";
+            // 
             // listBox_Bokningar
             // 
             this.listBox_Bokningar.FormattingEnabled = true;
@@ -835,10 +863,28 @@
             this.listBox_Bokningar.Size = new System.Drawing.Size(571, 121);
             this.listBox_Bokningar.TabIndex = 2;
             // 
+            // groupBox_Bokning_Aktiviteter
+            // 
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.listBox_Bokning_Aktivitet);
+            this.groupBox_Bokning_Aktiviteter.Location = new System.Drawing.Point(288, 14);
+            this.groupBox_Bokning_Aktiviteter.Name = "groupBox_Bokning_Aktiviteter";
+            this.groupBox_Bokning_Aktiviteter.Size = new System.Drawing.Size(520, 177);
+            this.groupBox_Bokning_Aktiviteter.TabIndex = 4;
+            this.groupBox_Bokning_Aktiviteter.TabStop = false;
+            this.groupBox_Bokning_Aktiviteter.Text = "Träningspass";
+            // 
+            // listBox_Bokning_Aktivitet
+            // 
+            this.listBox_Bokning_Aktivitet.FormattingEnabled = true;
+            this.listBox_Bokning_Aktivitet.Location = new System.Drawing.Point(7, 20);
+            this.listBox_Bokning_Aktivitet.Name = "listBox_Bokning_Aktivitet";
+            this.listBox_Bokning_Aktivitet.Size = new System.Drawing.Size(501, 147);
+            this.listBox_Bokning_Aktivitet.TabIndex = 0;
+            // 
             // groupBox_Bokning_Medlemmar
             // 
             this.groupBox_Bokning_Medlemmar.Controls.Add(this.listBox_Bokning_Medlem);
-            this.groupBox_Bokning_Medlemmar.Location = new System.Drawing.Point(137, 14);
+            this.groupBox_Bokning_Medlemmar.Location = new System.Drawing.Point(81, 14);
             this.groupBox_Bokning_Medlemmar.Name = "groupBox_Bokning_Medlemmar";
             this.groupBox_Bokning_Medlemmar.Size = new System.Drawing.Size(201, 177);
             this.groupBox_Bokning_Medlemmar.TabIndex = 3;
@@ -852,52 +898,6 @@
             this.listBox_Bokning_Medlem.Name = "listBox_Bokning_Medlem";
             this.listBox_Bokning_Medlem.Size = new System.Drawing.Size(181, 147);
             this.listBox_Bokning_Medlem.TabIndex = 0;
-            // 
-            // groupBox_Bokning_Aktiviteter
-            // 
-            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.listBox_Bokning_Aktivitet);
-            this.groupBox_Bokning_Aktiviteter.Location = new System.Drawing.Point(344, 14);
-            this.groupBox_Bokning_Aktiviteter.Name = "groupBox_Bokning_Aktiviteter";
-            this.groupBox_Bokning_Aktiviteter.Size = new System.Drawing.Size(386, 177);
-            this.groupBox_Bokning_Aktiviteter.TabIndex = 4;
-            this.groupBox_Bokning_Aktiviteter.TabStop = false;
-            this.groupBox_Bokning_Aktiviteter.Text = "Träningspass";
-            // 
-            // listBox_Bokning_Aktivitet
-            // 
-            this.listBox_Bokning_Aktivitet.FormattingEnabled = true;
-            this.listBox_Bokning_Aktivitet.Location = new System.Drawing.Point(7, 20);
-            this.listBox_Bokning_Aktivitet.Name = "listBox_Bokning_Aktivitet";
-            this.listBox_Bokning_Aktivitet.Size = new System.Drawing.Size(367, 147);
-            this.listBox_Bokning_Aktivitet.TabIndex = 0;
-            // 
-            // groupBox_Bokningar
-            // 
-            this.groupBox_Bokningar.Controls.Add(this.listBox_Bokningar);
-            this.groupBox_Bokningar.Location = new System.Drawing.Point(137, 197);
-            this.groupBox_Bokningar.Name = "groupBox_Bokningar";
-            this.groupBox_Bokningar.Size = new System.Drawing.Size(587, 135);
-            this.groupBox_Bokningar.TabIndex = 5;
-            this.groupBox_Bokningar.TabStop = false;
-            this.groupBox_Bokningar.Text = "Bokningar";
-            // 
-            // button_Bokning_Boka
-            // 
-            this.button_Bokning_Boka.Location = new System.Drawing.Point(779, 34);
-            this.button_Bokning_Boka.Name = "button_Bokning_Boka";
-            this.button_Bokning_Boka.Size = new System.Drawing.Size(75, 23);
-            this.button_Bokning_Boka.TabIndex = 6;
-            this.button_Bokning_Boka.Text = "Boka";
-            this.button_Bokning_Boka.UseVisualStyleBackColor = true;
-            // 
-            // button_Bokning_Avboka
-            // 
-            this.button_Bokning_Avboka.Location = new System.Drawing.Point(779, 211);
-            this.button_Bokning_Avboka.Name = "button_Bokning_Avboka";
-            this.button_Bokning_Avboka.Size = new System.Drawing.Size(75, 23);
-            this.button_Bokning_Avboka.TabIndex = 7;
-            this.button_Bokning_Avboka.Text = "Avboka";
-            this.button_Bokning_Avboka.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -921,9 +921,9 @@
             this.groupBox_Instruktor_.ResumeLayout(false);
             this.groupBox_Instruktor_.PerformLayout();
             this.tabPage_Bokning.ResumeLayout(false);
-            this.groupBox_Bokning_Medlemmar.ResumeLayout(false);
-            this.groupBox_Bokning_Aktiviteter.ResumeLayout(false);
             this.groupBox_Bokningar.ResumeLayout(false);
+            this.groupBox_Bokning_Aktiviteter.ResumeLayout(false);
+            this.groupBox_Bokning_Medlemmar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
