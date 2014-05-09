@@ -21,9 +21,11 @@ namespace Gymverksamhet_G3
         //VARIABLER
         private Medlem aktuellMedlem;
         private Instruktor aktuellInstruktor;
+        private Aktivitet aktuellAktivitet;
+        private Bokning aktuellBokning;
         private Medlem bokningsmarkeradMedlem;      //ny för att undvika dubbelmarkering på olika flikar
         private Aktivitet bokningsmarkeradAktivitet; //same ^
-        private Aktivitet aktuellAktivitet;
+        
 
 
         //METODER
@@ -173,6 +175,18 @@ namespace Gymverksamhet_G3
             Databasfunktioner.AddBokning(bokningsmarkeradAktivitet.Passnummer, bokningsmarkeradMedlem.Medlemsnummer);
             Uppdatera_Bokningslista();
         }
+        private void listBox_Bokningar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            aktuellBokning = (Bokning)listBox_Bokningar.SelectedItem;
+        }
+
+        private void button_Bokning_Avboka_Click(object sender, EventArgs e)
+        {
+            Databasfunktioner.RemoveBokning(aktuellBokning.PassnummerID, aktuellBokning.MedlemsID);
+            Uppdatera_Bokningslista();
+        }
+
+       
         
         
 

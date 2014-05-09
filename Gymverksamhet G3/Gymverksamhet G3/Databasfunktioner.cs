@@ -347,6 +347,15 @@ namespace Gymverksamhet_G3
                 conn.Close();
             }
         }
+        public static void RemoveBokning(string Passnummer, string Medlemsnummer)           
+        {
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
+            NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
+            conn.Open();
+            NpgsqlCommand command = new NpgsqlCommand("DELETE FROM bokning WHERE id_passnummer ='" + Passnummer + "' AND id_medlemsnummer ='" + Medlemsnummer + "'", conn);
+            int numberOfRowsAffected = command.ExecuteNonQuery();
+            conn.Close();
+        }
 
 
         public static BindingList<Bokning> GetBokningar()         

@@ -845,6 +845,7 @@
             this.button_Bokning_Avboka.TabIndex = 7;
             this.button_Bokning_Avboka.Text = "Avboka";
             this.button_Bokning_Avboka.UseVisualStyleBackColor = true;
+            this.button_Bokning_Avboka.Click += new System.EventHandler(this.button_Bokning_Avboka_Click);
             // 
             // button_Bokning_Boka
             // 
@@ -873,6 +874,7 @@
             this.listBox_Bokningar.Name = "listBox_Bokningar";
             this.listBox_Bokningar.Size = new System.Drawing.Size(571, 121);
             this.listBox_Bokningar.TabIndex = 2;
+            this.listBox_Bokningar.SelectedIndexChanged += new System.EventHandler(this.listBox_Bokningar_SelectedIndexChanged);
             // 
             // groupBox_Bokning_Aktiviteter
             // 
