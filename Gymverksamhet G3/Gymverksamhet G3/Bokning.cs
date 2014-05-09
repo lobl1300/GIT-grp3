@@ -13,6 +13,10 @@ namespace Gymverksamhet_G3
         public string MedlemsID { get; set; }
 
         //METODER
+        public override string ToString()
+        {
+            return PassnummerID + "\t" + MedlemsID;
+        }
       
     }
 }
