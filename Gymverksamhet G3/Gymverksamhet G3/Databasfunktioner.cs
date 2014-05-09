@@ -119,8 +119,8 @@ namespace Gymverksamhet_G3
             command.Parameters["nTelefon"].Value = nyTelefon;
             command.Parameters.Add(new NpgsqlParameter("nMailadress", NpgsqlDbType.Varchar));
             command.Parameters["nMailadress"].Value = nyMailadress;
-            command.Parameters.Add(new NpgsqlParameter("nGatuadress", NpgsqlDbType.Varchar));
-            command.Parameters["nGatuadress"].Value = nyGatuadress;
+            command.Parameters.Add(new NpgsqlParameter("nGatuadress", NpgsqlDbType.Varchar));   //Kommer ej gå att uppdatera pg fk-pk constraint
+            command.Parameters["nGatuadress"].Value = nyGatuadress;                             //adresser har en egen tabell, denna parameter pekar på fk
             command.Parameters.Add(new NpgsqlParameter("nMedlemsskapstyp", NpgsqlDbType.Varchar));
             command.Parameters["nMedlemsskapstyp"].Value = nyMedlemskapstyp;
             command.Parameters.Add(new NpgsqlParameter("nMedlemskort", NpgsqlDbType.Varchar));
@@ -289,7 +289,7 @@ namespace Gymverksamhet_G3
             {
                 Instruktor instruktor = new Instruktor
                 {
-                    Personnummer = (string)dr["instruktorsnummer"],
+                    Instruktorsnummer = (string)dr["instruktorsnummer"],
                     Fornamn = (string)dr["fornamn"],
                     Efternamn = (string)dr["efternamn"],
                     Telefonummer = (string)dr["telefonnummer"],

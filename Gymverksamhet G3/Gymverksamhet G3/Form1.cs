@@ -26,7 +26,8 @@ namespace Gymverksamhet_G3
         //METODER
         private void Form1_Load(object sender, EventArgs e)
         {
-            Uppdatera_Medlemslista();
+            Uppdatera_Medlemslista();       //möjlig bugg gör det svårt att öppna connection via denna metodreferens vid programstart
+            //listBox_Medlem.DataSource = Databasfunktioner.GetMedlemmar();
             Uppdatera_Instruktorslista();
         }
         private void Uppdatera_Medlemslista()
@@ -97,9 +98,49 @@ namespace Gymverksamhet_G3
         {
             Rensa_Textboxar_Medlem();
         }
+
         //**************************************************************************************************************************************
         //**************************************************************************************************************************************
         //Instruktörer
+
+        private void button_Instruktor_LaggTill_Click(object sender, EventArgs e)
+        {
+            Databasfunktioner.AddInstruktor(textBox_Instruktor_Personnummer.Text, textBox_Instruktor_Fornamn.Text, textBox_Instruktor_Efternamn.Text, textBox_Instruktor_Telefonnummer.Text, textBox_Instruktor_Mailadress.Text, textBox_Instruktor_Gatuadress.Text);
+            Uppdatera_Instruktorslista();
+        }
+
+        private void listBox_Instruktor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            aktuellInstruktor = (Instruktor)listBox_Instruktor.SelectedItem;
+
+            textBox_Instruktor_Personnummer.Text = aktuellInstruktor.Instruktorsnummer;
+            textBox_Instruktor_Fornamn.Text = aktuellInstruktor.Fornamn;
+            textBox_Instruktor_Efternamn.Text = aktuellInstruktor.Efternamn;
+            textBox_Instruktor_Telefonnummer.Text = aktuellInstruktor.Telefonummer;
+            textBox_Instruktor_Mailadress.Text = aktuellInstruktor.Mailadress;
+            textBox_Instruktor_Gatuadress.Text = aktuellInstruktor.Gatuadress;
+        }
+
+        private void button_Instruktor_Uppdatera_Click(object sender, EventArgs e)
+        {
+            Databasfunktioner.UpdateInstruktor(aktuellInstruktor.Instruktorsnummer, textBox_Instruktor_Fornamn.Text, textBox_Instruktor_Efternamn.Text, textBox_Instruktor_Telefonnummer.Text, textBox_Instruktor_Mailadress.Text, textBox_Instruktor_Gatuadress.Text);
+            Uppdatera_Instruktorslista();
+        }
+
+        private void button_Instruktor_TaBort_Click(object sender, EventArgs e)
+        {
+            Databasfunktioner.RemoveInstruktor(aktuellInstruktor.Instruktorsnummer);
+            Uppdatera_Instruktorslista();
+        }
+
+        private void button_Instruktor_Rensa_Click(object sender, EventArgs e)
+        {
+            Rensa_Textboxar_Instruktor();
+        }
+
+        //**************************************************************************************************************************************
+        //**************************************************************************************************************************************
+        //Bokningar
 
 
         

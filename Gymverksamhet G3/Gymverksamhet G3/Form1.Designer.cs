@@ -58,7 +58,6 @@
             this.textBox_Medlem_Gatuadress = new System.Windows.Forms.TextBox();
             this.textBox_Medlem_Efternamn = new System.Windows.Forms.TextBox();
             this.groupBox_Medlem = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.listBox_Medlem = new System.Windows.Forms.ListBox();
             this.tabPage_Schema = new System.Windows.Forms.TabPage();
             this.dataGridView_Schema = new System.Windows.Forms.DataGridView();
@@ -413,7 +412,6 @@
             // 
             // groupBox_Medlem
             // 
-            this.groupBox_Medlem.Controls.Add(this.button1);
             this.groupBox_Medlem.Controls.Add(this.listBox_Medlem);
             this.groupBox_Medlem.Location = new System.Drawing.Point(338, 6);
             this.groupBox_Medlem.Name = "groupBox_Medlem";
@@ -421,15 +419,6 @@
             this.groupBox_Medlem.TabIndex = 0;
             this.groupBox_Medlem.TabStop = false;
             this.groupBox_Medlem.Text = "Medlemslista";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // listBox_Medlem
             // 
@@ -541,6 +530,7 @@
             this.listBox_Instruktor.Name = "listBox_Instruktor";
             this.listBox_Instruktor.Size = new System.Drawing.Size(316, 186);
             this.listBox_Instruktor.TabIndex = 0;
+            this.listBox_Instruktor.SelectedIndexChanged += new System.EventHandler(this.listBox_Instruktor_SelectedIndexChanged);
             // 
             // groupBox_Instruktor_
             // 
@@ -579,6 +569,7 @@
             this.button_Instruktor_TaBort.TabIndex = 19;
             this.button_Instruktor_TaBort.Text = "Ta bort";
             this.button_Instruktor_TaBort.UseVisualStyleBackColor = true;
+            this.button_Instruktor_TaBort.Click += new System.EventHandler(this.button_Instruktor_TaBort_Click);
             // 
             // button_Instruktor_Uppdatera
             // 
@@ -588,6 +579,7 @@
             this.button_Instruktor_Uppdatera.TabIndex = 18;
             this.button_Instruktor_Uppdatera.Text = "Uppdatera";
             this.button_Instruktor_Uppdatera.UseVisualStyleBackColor = true;
+            this.button_Instruktor_Uppdatera.Click += new System.EventHandler(this.button_Instruktor_Uppdatera_Click);
             // 
             // button_Instruktor_Rensa
             // 
@@ -597,6 +589,7 @@
             this.button_Instruktor_Rensa.TabIndex = 14;
             this.button_Instruktor_Rensa.Text = "Rensa";
             this.button_Instruktor_Rensa.UseVisualStyleBackColor = true;
+            this.button_Instruktor_Rensa.Click += new System.EventHandler(this.button_Instruktor_Rensa_Click);
             // 
             // label_Instruktor_personnummer
             // 
@@ -678,6 +671,7 @@
             this.button_Instruktor_LaggTill.TabIndex = 0;
             this.button_Instruktor_LaggTill.Text = "Registrera";
             this.button_Instruktor_LaggTill.UseVisualStyleBackColor = true;
+            this.button_Instruktor_LaggTill.Click += new System.EventHandler(this.button_Instruktor_LaggTill_Click);
             // 
             // textBox_Instruktor_Telefonnummer
             // 
@@ -966,7 +960,6 @@
         private System.Windows.Forms.TextBox textBox_Medlem_Gatuadress;
         private System.Windows.Forms.TextBox textBox_Medlem_Efternamn;
         private System.Windows.Forms.GroupBox groupBox_Medlem;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox_Medlem;
         private System.Windows.Forms.TabPage tabPage_Schema;
         private System.Windows.Forms.DataGridView dataGridView_Schema;

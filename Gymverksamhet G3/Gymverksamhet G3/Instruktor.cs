@@ -9,7 +9,7 @@ namespace Gymverksamhet_G3
     class Instruktor
     {
         //PROPERTIES        
-        public string Personnummer { get; set; }
+        public string Instruktorsnummer { get; set; }
         public string Fornamn { get; set; }
         public string Efternamn { get; set; }
         public string Telefonummer { get; set; }
