@@ -111,6 +111,13 @@
             this.listBox_Bokning_Aktivitet = new System.Windows.Forms.ListBox();
             this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button_Aktivitet_add = new System.Windows.Forms.Button();
+            this.button_Aktivitet_Update = new System.Windows.Forms.Button();
+            this.button_Aktivitet_Remove = new System.Windows.Forms.Button();
             this.tabControl_Form1.SuspendLayout();
             this.tabPage_Medlemmar.SuspendLayout();
             this.groupBox_Medlemsuppgifter.SuspendLayout();
@@ -432,6 +439,9 @@
             // tabPage_Schema
             // 
             this.tabPage_Schema.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage_Schema.Controls.Add(this.button_Aktivitet_Remove);
+            this.tabPage_Schema.Controls.Add(this.button_Aktivitet_Update);
+            this.tabPage_Schema.Controls.Add(this.button_Aktivitet_add);
             this.tabPage_Schema.Controls.Add(this.dateTimePicker_Schema_Datum);
             this.tabPage_Schema.Controls.Add(this.label_Schema_Instruktör);
             this.tabPage_Schema.Controls.Add(this.label_Schema_Aktivitet);
@@ -844,6 +854,7 @@
             this.button_Bokning_Boka.TabIndex = 6;
             this.button_Bokning_Boka.Text = "Boka";
             this.button_Bokning_Boka.UseVisualStyleBackColor = true;
+            this.button_Bokning_Boka.Click += new System.EventHandler(this.button_Bokning_Boka_Click);
             // 
             // groupBox_Bokningar
             // 
@@ -865,6 +876,10 @@
             // 
             // groupBox_Bokning_Aktiviteter
             // 
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.label4);
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.label3);
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.label2);
+            this.groupBox_Bokning_Aktiviteter.Controls.Add(this.label1);
             this.groupBox_Bokning_Aktiviteter.Controls.Add(this.listBox_Bokning_Aktivitet);
             this.groupBox_Bokning_Aktiviteter.Location = new System.Drawing.Point(288, 14);
             this.groupBox_Bokning_Aktiviteter.Name = "groupBox_Bokning_Aktiviteter";
@@ -880,6 +895,7 @@
             this.listBox_Bokning_Aktivitet.Name = "listBox_Bokning_Aktivitet";
             this.listBox_Bokning_Aktivitet.Size = new System.Drawing.Size(501, 147);
             this.listBox_Bokning_Aktivitet.TabIndex = 0;
+            this.listBox_Bokning_Aktivitet.SelectedIndexChanged += new System.EventHandler(this.listBox_Bokning_Aktivitet_SelectedIndexChanged);
             // 
             // groupBox_Bokning_Medlemmar
             // 
@@ -898,6 +914,70 @@
             this.listBox_Bokning_Medlem.Name = "listBox_Bokning_Medlem";
             this.listBox_Bokning_Medlem.Size = new System.Drawing.Size(181, 147);
             this.listBox_Bokning_Medlem.TabIndex = 0;
+            this.listBox_Bokning_Medlem.SelectedIndexChanged += new System.EventHandler(this.listBox_Bokning_Medlem_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(102, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tidsperiod";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(246, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Instruktör";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(342, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Träningstyp";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(432, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Lokal";
+            // 
+            // button_Aktivitet_add
+            // 
+            this.button_Aktivitet_add.Location = new System.Drawing.Point(228, 306);
+            this.button_Aktivitet_add.Name = "button_Aktivitet_add";
+            this.button_Aktivitet_add.Size = new System.Drawing.Size(75, 23);
+            this.button_Aktivitet_add.TabIndex = 12;
+            this.button_Aktivitet_add.Text = "Add";
+            this.button_Aktivitet_add.UseVisualStyleBackColor = true;
+            // 
+            // button_Aktivitet_Update
+            // 
+            this.button_Aktivitet_Update.Location = new System.Drawing.Point(401, 311);
+            this.button_Aktivitet_Update.Name = "button_Aktivitet_Update";
+            this.button_Aktivitet_Update.Size = new System.Drawing.Size(75, 23);
+            this.button_Aktivitet_Update.TabIndex = 13;
+            this.button_Aktivitet_Update.Text = "Update";
+            this.button_Aktivitet_Update.UseVisualStyleBackColor = true;
+            // 
+            // button_Aktivitet_Remove
+            // 
+            this.button_Aktivitet_Remove.Location = new System.Drawing.Point(555, 308);
+            this.button_Aktivitet_Remove.Name = "button_Aktivitet_Remove";
+            this.button_Aktivitet_Remove.Size = new System.Drawing.Size(75, 23);
+            this.button_Aktivitet_Remove.TabIndex = 14;
+            this.button_Aktivitet_Remove.Text = "Remove";
+            this.button_Aktivitet_Remove.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -923,6 +1003,7 @@
             this.tabPage_Bokning.ResumeLayout(false);
             this.groupBox_Bokningar.ResumeLayout(false);
             this.groupBox_Bokning_Aktiviteter.ResumeLayout(false);
+            this.groupBox_Bokning_Aktiviteter.PerformLayout();
             this.groupBox_Bokning_Medlemmar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1013,6 +1094,13 @@
         private System.Windows.Forms.ListBox listBox_Bokning_Aktivitet;
         private System.Windows.Forms.GroupBox groupBox_Bokning_Medlemmar;
         private System.Windows.Forms.ListBox listBox_Bokning_Medlem;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_Aktivitet_Remove;
+        private System.Windows.Forms.Button button_Aktivitet_Update;
+        private System.Windows.Forms.Button button_Aktivitet_add;
     }
 }
 

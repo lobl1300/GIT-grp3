@@ -20,7 +20,10 @@ namespace Gymverksamhet_G3
         }
         //VARIABLER
         private Medlem aktuellMedlem;
-        private Instruktor aktuellInstruktor;       
+        private Instruktor aktuellInstruktor;
+        private Medlem bokningsmarkeradMedlem;      //ny för att undvika dubbelmarkering på olika flikar
+        private Aktivitet bokningsmarkeradAktivitet; //same ^
+        private Aktivitet aktuellAktivitet;
 
 
         //METODER
@@ -30,6 +33,7 @@ namespace Gymverksamhet_G3
             //listBox_Medlem.DataSource = Databasfunktioner.GetMedlemmar();
             Uppdatera_Instruktorslista();
             Uppdatera_Aktivitetslista();
+            Uppdatera_Bokningslista();
         }
         private void Uppdatera_Medlemslista()
         {
@@ -50,7 +54,7 @@ namespace Gymverksamhet_G3
         }
         private void Uppdatera_Instruktorslista()
         {
-            listBox_Instruktor.DataSource = Databasfunktioner.GetInstruktor();
+            listBox_Instruktor.DataSource = Databasfunktioner.GetInstruktorer();
         }
         private void Rensa_Textboxar_Instruktor()
         {
@@ -63,9 +67,12 @@ namespace Gymverksamhet_G3
         }
         private void Uppdatera_Aktivitetslista()
         {
-            listBox_Bokning_Aktivitet.DataSource = Databasfunktioner.GetAktivitet();
+            listBox_Bokning_Aktivitet.DataSource = Databasfunktioner.GetAktiviteter();
         }
-
+        private void Uppdatera_Bokningslista()
+        {
+            listBox_Bokningar.DataSource = Databasfunktioner.GetBokningar();
+        }
 
         //KNAPPAR & KONTROLLER
         //**************************************************************************************************************
@@ -143,12 +150,30 @@ namespace Gymverksamhet_G3
         {
             Rensa_Textboxar_Instruktor();
         }
+        //**************************************************************************************************************************************
+        //**************************************************************************************************************************************
+        //Aktiviteter
+        
+        
 
         //**************************************************************************************************************************************
         //**************************************************************************************************************************************
         //Bokningar
+        private void listBox_Bokning_Medlem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bokningsmarkeradMedlem = (Medlem)listBox_Bokning_Medlem.SelectedItem;            
+        }
+        private void listBox_Bokning_Aktivitet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bokningsmarkeradAktivitet = (Aktivitet)listBox_Bokning_Aktivitet.SelectedItem;
+        }
 
-
+        private void button_Bokning_Boka_Click(object sender, EventArgs e)
+        {
+            Databasfunktioner.AddBokning(bokningsmarkeradAktivitet.Passnummer, bokningsmarkeradMedlem.Medlemsnummer);
+            Uppdatera_Bokningslista();
+        }
+        
         
 
        

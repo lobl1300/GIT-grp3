@@ -277,7 +277,7 @@ namespace Gymverksamhet_G3
             conn.Close();
         }
 
-        public static BindingList<Instruktor> GetInstruktor()                 //Hämta, läs in, sortera & presentera instruktörslista
+        public static BindingList<Instruktor> GetInstruktorer()                 //Hämta, läs in, sortera & presentera instruktörslista
         {
             BindingList<Instruktor> instruktorslista = new BindingList<Instruktor>();
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
@@ -306,7 +306,7 @@ namespace Gymverksamhet_G3
         //************************************************************************************************************************
         //*************************************************************************************************************************
         //Bokningar
-        public static void Boka(string bokAktivitet, string bokMedlem)
+        public static void AddBokning(string bokAktivitet, string bokMedlem)
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
             NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
@@ -330,11 +330,11 @@ namespace Gymverksamhet_G3
                                                              WHERE id_passnummer = :bAktivitet
                                                              AND id_medlemsnummer = :bMedlem", conn);
                 command2.Parameters.Add(new NpgsqlParameter("bAktivitet", NpgsqlDbType.Varchar));
-                command2.Parameters["bMedlem"].Value = bokAktivitet;
+                command2.Parameters["bAktivitet"].Value = bokAktivitet;
                 command2.Parameters.Add(new NpgsqlParameter("bMedlem", NpgsqlDbType.Varchar));
                 command2.Parameters["bMedlem"].Value = bokMedlem;
                 command2.Transaction = trans;
-                string dagtid = (string)command2.ExecuteScalar();
+                string bokningsnyckel = (string)command2.ExecuteScalar();
 
                 trans.Commit();
             }
@@ -349,7 +349,7 @@ namespace Gymverksamhet_G3
         }
 
 
-        public static BindingList<Bokning> GetBokning()         
+        public static BindingList<Bokning> GetBokningar()         
         {
             BindingList<Bokning> bokningslista = new BindingList<Bokning>();
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];
@@ -373,8 +373,12 @@ namespace Gymverksamhet_G3
         //************************************************************************************************************************
         //*************************************************************************************************************************
         //Aktivitet
+        public static void AddAktiviter(string regPassnummer, string regTidsperiod, string regInstruktor, string regTraningstyp, int regLokal)
+        {
 
-        public static BindingList<Aktivitet> GetAktivitet()
+        }
+
+        public static BindingList<Aktivitet> GetAktiviteter()
         {
             BindingList<Aktivitet> aktivitetslista = new BindingList<Aktivitet>();
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[conString];

@@ -18,7 +18,7 @@ namespace Gymverksamhet_G3
         //METODER
         public override string ToString()
         {
-            return Passnummer + "\t" + Tidsperiod + "\n" + Ledande_Instruktor + "\t" + Traningstyp + "\t" + Lokal;
+            return Passnummer + "\t" + Tidsperiod + "\t" + Ledande_Instruktor + "\t" + Traningstyp + "\t" + Lokal;
         }
     }
 }
