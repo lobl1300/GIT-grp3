@@ -12,7 +12,7 @@ namespace Gymverksamhet_G3
         public string Passnummer { get; set; }
         public DateTime Tidsperiod { get; set; }
         public string Ledande_Instruktor { get; set; }
-        public string Träningstyp { get; set; }
+        public string Traningstyp { get; set; }
         public string Lokal { get; set; }
 
         //METODER
