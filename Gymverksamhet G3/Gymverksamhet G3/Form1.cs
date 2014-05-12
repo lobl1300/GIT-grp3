@@ -186,6 +186,36 @@ namespace Gymverksamhet_G3
             Uppdatera_Bokningslista();
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] userLevel = new string[] { "Instruktör, Medlem, Reception, Ägare" };
+            comboBoxUserLevel.Items.AddRange(userLevel);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
        
         
         

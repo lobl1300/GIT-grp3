@@ -120,13 +120,14 @@
             this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
             this.tabPage = new System.Windows.Forms.TabPage();
+            this.comboBoxUserLevel = new System.Windows.Forms.ComboBox();
             this.buttonSetUserLevel = new System.Windows.Forms.Button();
             this.labelUserlevel = new System.Windows.Forms.Label();
-            this.domainUpDownUserLevel = new System.Windows.Forms.DomainUpDown();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl_Form1.SuspendLayout();
             this.tabPage_Medlemmar.SuspendLayout();
             this.groupBox_Medlemsuppgifter.SuspendLayout();
@@ -1004,9 +1005,9 @@
             // 
             // tabPage
             // 
+            this.tabPage.Controls.Add(this.comboBoxUserLevel);
             this.tabPage.Controls.Add(this.buttonSetUserLevel);
             this.tabPage.Controls.Add(this.labelUserlevel);
-            this.tabPage.Controls.Add(this.domainUpDownUserLevel);
             this.tabPage.Controls.Add(this.labelPassword);
             this.tabPage.Controls.Add(this.labelUsername);
             this.tabPage.Controls.Add(this.textBox2);
@@ -1019,36 +1020,37 @@
             this.tabPage.Text = "Administration";
             this.tabPage.UseVisualStyleBackColor = true;
             // 
+            // comboBoxUserLevel
+            // 
+            this.comboBoxUserLevel.FormattingEnabled = true;
+            this.comboBoxUserLevel.Location = new System.Drawing.Point(428, 70);
+            this.comboBoxUserLevel.Name = "comboBoxUserLevel";
+            this.comboBoxUserLevel.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxUserLevel.TabIndex = 7;
+            this.comboBoxUserLevel.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // buttonSetUserLevel
             // 
-            this.buttonSetUserLevel.Location = new System.Drawing.Point(607, 69);
+            this.buttonSetUserLevel.Location = new System.Drawing.Point(563, 69);
             this.buttonSetUserLevel.Name = "buttonSetUserLevel";
-            this.buttonSetUserLevel.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetUserLevel.Size = new System.Drawing.Size(107, 23);
             this.buttonSetUserLevel.TabIndex = 6;
-            this.buttonSetUserLevel.Text = "button2";
+            this.buttonSetUserLevel.Text = "Lägg till användare";
             this.buttonSetUserLevel.UseVisualStyleBackColor = true;
             // 
             // labelUserlevel
             // 
             this.labelUserlevel.AutoSize = true;
-            this.labelUserlevel.Location = new System.Drawing.Point(453, 54);
+            this.labelUserlevel.Location = new System.Drawing.Point(425, 54);
             this.labelUserlevel.Name = "labelUserlevel";
             this.labelUserlevel.Size = new System.Drawing.Size(58, 13);
             this.labelUserlevel.TabIndex = 5;
             this.labelUserlevel.Text = "Behörighet";
             // 
-            // domainUpDownUserLevel
-            // 
-            this.domainUpDownUserLevel.Location = new System.Drawing.Point(456, 70);
-            this.domainUpDownUserLevel.Name = "domainUpDownUserLevel";
-            this.domainUpDownUserLevel.Size = new System.Drawing.Size(120, 20);
-            this.domainUpDownUserLevel.TabIndex = 4;
-            this.domainUpDownUserLevel.Text = "domainUpDown1";
-            // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(334, 50);
+            this.labelPassword.Location = new System.Drawing.Point(311, 50);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(51, 13);
             this.labelPassword.TabIndex = 3;
@@ -1065,7 +1067,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(334, 69);
+            this.textBox2.Location = new System.Drawing.Point(313, 69);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
@@ -1205,11 +1207,12 @@
         private System.Windows.Forms.TabPage tabPage;
         private System.Windows.Forms.Button buttonSetUserLevel;
         private System.Windows.Forms.Label labelUserlevel;
-        private System.Windows.Forms.DomainUpDown domainUpDownUserLevel;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ComboBox comboBoxUserLevel;
     }
 }
 
