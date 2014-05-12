@@ -121,12 +121,12 @@
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
             this.tabPage = new System.Windows.Forms.TabPage();
             this.comboBoxUserLevel = new System.Windows.Forms.ComboBox();
-            this.buttonSetUserLevel = new System.Windows.Forms.Button();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             this.labelUserlevel = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl_Form1.SuspendLayout();
             this.tabPage_Medlemmar.SuspendLayout();
@@ -1006,12 +1006,12 @@
             // tabPage
             // 
             this.tabPage.Controls.Add(this.comboBoxUserLevel);
-            this.tabPage.Controls.Add(this.buttonSetUserLevel);
+            this.tabPage.Controls.Add(this.buttonAddUser);
             this.tabPage.Controls.Add(this.labelUserlevel);
             this.tabPage.Controls.Add(this.labelPassword);
             this.tabPage.Controls.Add(this.labelUsername);
-            this.tabPage.Controls.Add(this.textBox2);
-            this.tabPage.Controls.Add(this.textBox1);
+            this.tabPage.Controls.Add(this.textBoxPassword);
+            this.tabPage.Controls.Add(this.textBoxUserName);
             this.tabPage.Location = new System.Drawing.Point(4, 22);
             this.tabPage.Name = "tabPage";
             this.tabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -1029,14 +1029,15 @@
             this.comboBoxUserLevel.TabIndex = 7;
             this.comboBoxUserLevel.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // buttonSetUserLevel
+            // buttonAddUser
             // 
-            this.buttonSetUserLevel.Location = new System.Drawing.Point(563, 69);
-            this.buttonSetUserLevel.Name = "buttonSetUserLevel";
-            this.buttonSetUserLevel.Size = new System.Drawing.Size(107, 23);
-            this.buttonSetUserLevel.TabIndex = 6;
-            this.buttonSetUserLevel.Text = "Lägg till användare";
-            this.buttonSetUserLevel.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Location = new System.Drawing.Point(563, 69);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(107, 23);
+            this.buttonAddUser.TabIndex = 6;
+            this.buttonAddUser.Text = "Lägg till användare";
+            this.buttonAddUser.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonSetUserLevel_Click);
             // 
             // labelUserlevel
             // 
@@ -1065,19 +1066,19 @@
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Användarnamn";
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(313, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxPassword.Location = new System.Drawing.Point(313, 69);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPassword.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(198, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxUserName.Location = new System.Drawing.Point(198, 70);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUserName.TabIndex = 0;
             // 
             // Form1
             // 
@@ -1205,12 +1206,12 @@
         private System.Windows.Forms.Button button_Aktivitet_add;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage;
-        private System.Windows.Forms.Button buttonSetUserLevel;
+        private System.Windows.Forms.Button buttonAddUser;
         private System.Windows.Forms.Label labelUserlevel;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxUserName;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox comboBoxUserLevel;
     }

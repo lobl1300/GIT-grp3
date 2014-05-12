@@ -36,6 +36,9 @@ namespace Gymverksamhet_G3
             Uppdatera_Instruktorslista();
             Uppdatera_Aktivitetslista();
             Uppdatera_Bokningslista();
+
+            string[] userLevel = new string[] { "Instruktör", "Medlem", "Reception", "Ägare" };
+            comboBoxUserLevel.Items.AddRange(userLevel);
         }
         private void Uppdatera_Medlemslista()
         {
@@ -188,9 +191,15 @@ namespace Gymverksamhet_G3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] userLevel = new string[] { "Instruktör, Medlem, Reception, Ägare" };
-            comboBoxUserLevel.Items.AddRange(userLevel);
+             
         }
+
+        private void buttonSetUserLevel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
 
 
 
