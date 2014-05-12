@@ -120,7 +120,7 @@
             this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
             this.tabPage = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSetUserLevel = new System.Windows.Forms.Button();
             this.labelUserlevel = new System.Windows.Forms.Label();
             this.domainUpDownUserLevel = new System.Windows.Forms.DomainUpDown();
             this.labelPassword = new System.Windows.Forms.Label();
@@ -1004,7 +1004,7 @@
             // 
             // tabPage
             // 
-            this.tabPage.Controls.Add(this.button2);
+            this.tabPage.Controls.Add(this.buttonSetUserLevel);
             this.tabPage.Controls.Add(this.labelUserlevel);
             this.tabPage.Controls.Add(this.domainUpDownUserLevel);
             this.tabPage.Controls.Add(this.labelPassword);
@@ -1019,14 +1019,14 @@
             this.tabPage.Text = "Administration";
             this.tabPage.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonSetUserLevel
             // 
-            this.button2.Location = new System.Drawing.Point(607, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSetUserLevel.Location = new System.Drawing.Point(607, 69);
+            this.buttonSetUserLevel.Name = "buttonSetUserLevel";
+            this.buttonSetUserLevel.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetUserLevel.TabIndex = 6;
+            this.buttonSetUserLevel.Text = "button2";
+            this.buttonSetUserLevel.UseVisualStyleBackColor = true;
             // 
             // labelUserlevel
             // 
@@ -1203,7 +1203,7 @@
         private System.Windows.Forms.Button button_Aktivitet_add;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSetUserLevel;
         private System.Windows.Forms.Label labelUserlevel;
         private System.Windows.Forms.DomainUpDown domainUpDownUserLevel;
         private System.Windows.Forms.Label labelPassword;
