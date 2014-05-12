@@ -60,6 +60,7 @@
             this.groupBox_Medlem = new System.Windows.Forms.GroupBox();
             this.listBox_Medlem = new System.Windows.Forms.ListBox();
             this.tabPage_Schema = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_Aktivitet_Remove = new System.Windows.Forms.Button();
             this.button_Aktivitet_Update = new System.Windows.Forms.Button();
             this.button_Aktivitet_add = new System.Windows.Forms.Button();
@@ -118,7 +119,6 @@
             this.listBox_Bokning_Aktivitet = new System.Windows.Forms.ListBox();
             this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl_Form1.SuspendLayout();
             this.tabPage_Medlemmar.SuspendLayout();
             this.groupBox_Medlemsuppgifter.SuspendLayout();
@@ -462,6 +462,15 @@
             this.tabPage_Schema.TabIndex = 1;
             this.tabPage_Schema.Text = "Schema";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(141, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 83);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Spinning\r\n09:00 - 10:00";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // button_Aktivitet_Remove
             // 
             this.button_Aktivitet_Remove.Location = new System.Drawing.Point(555, 308);
@@ -588,6 +597,7 @@
             this.dataGridView_Schema.Name = "dataGridView_Schema";
             this.dataGridView_Schema.Size = new System.Drawing.Size(744, 234);
             this.dataGridView_Schema.TabIndex = 0;
+ 
             // 
             // Måndag
             // 
@@ -982,15 +992,6 @@
             this.listBox_Bokning_Medlem.Size = new System.Drawing.Size(181, 147);
             this.listBox_Bokning_Medlem.TabIndex = 0;
             this.listBox_Bokning_Medlem.SelectedIndexChanged += new System.EventHandler(this.listBox_Bokning_Medlem_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(141, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 83);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Spinning\r\n09:00 - 10:00";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
