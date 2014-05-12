@@ -119,6 +119,14 @@
             this.listBox_Bokning_Aktivitet = new System.Windows.Forms.ListBox();
             this.groupBox_Bokning_Medlemmar = new System.Windows.Forms.GroupBox();
             this.listBox_Bokning_Medlem = new System.Windows.Forms.ListBox();
+            this.tabPage = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.labelUserlevel = new System.Windows.Forms.Label();
+            this.domainUpDownUserLevel = new System.Windows.Forms.DomainUpDown();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl_Form1.SuspendLayout();
             this.tabPage_Medlemmar.SuspendLayout();
             this.groupBox_Medlemsuppgifter.SuspendLayout();
@@ -132,6 +140,7 @@
             this.groupBox_Bokningar.SuspendLayout();
             this.groupBox_Bokning_Aktiviteter.SuspendLayout();
             this.groupBox_Bokning_Medlemmar.SuspendLayout();
+            this.tabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_Form1
@@ -140,6 +149,7 @@
             this.tabControl_Form1.Controls.Add(this.tabPage_Schema);
             this.tabControl_Form1.Controls.Add(this.tabPage_Instruktörer);
             this.tabControl_Form1.Controls.Add(this.tabPage_Bokning);
+            this.tabControl_Form1.Controls.Add(this.tabPage);
             this.tabControl_Form1.Location = new System.Drawing.Point(12, 4);
             this.tabControl_Form1.Name = "tabControl_Form1";
             this.tabControl_Form1.SelectedIndex = 0;
@@ -597,7 +607,6 @@
             this.dataGridView_Schema.Name = "dataGridView_Schema";
             this.dataGridView_Schema.Size = new System.Drawing.Size(744, 234);
             this.dataGridView_Schema.TabIndex = 0;
- 
             // 
             // Måndag
             // 
@@ -993,6 +1002,81 @@
             this.listBox_Bokning_Medlem.TabIndex = 0;
             this.listBox_Bokning_Medlem.SelectedIndexChanged += new System.EventHandler(this.listBox_Bokning_Medlem_SelectedIndexChanged);
             // 
+            // tabPage
+            // 
+            this.tabPage.Controls.Add(this.button2);
+            this.tabPage.Controls.Add(this.labelUserlevel);
+            this.tabPage.Controls.Add(this.domainUpDownUserLevel);
+            this.tabPage.Controls.Add(this.labelPassword);
+            this.tabPage.Controls.Add(this.labelUsername);
+            this.tabPage.Controls.Add(this.textBox2);
+            this.tabPage.Controls.Add(this.textBox1);
+            this.tabPage.Location = new System.Drawing.Point(4, 22);
+            this.tabPage.Name = "tabPage";
+            this.tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage.Size = new System.Drawing.Size(917, 337);
+            this.tabPage.TabIndex = 4;
+            this.tabPage.Text = "Administration";
+            this.tabPage.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(607, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // labelUserlevel
+            // 
+            this.labelUserlevel.AutoSize = true;
+            this.labelUserlevel.Location = new System.Drawing.Point(453, 54);
+            this.labelUserlevel.Name = "labelUserlevel";
+            this.labelUserlevel.Size = new System.Drawing.Size(58, 13);
+            this.labelUserlevel.TabIndex = 5;
+            this.labelUserlevel.Text = "Behörighet";
+            // 
+            // domainUpDownUserLevel
+            // 
+            this.domainUpDownUserLevel.Location = new System.Drawing.Point(456, 70);
+            this.domainUpDownUserLevel.Name = "domainUpDownUserLevel";
+            this.domainUpDownUserLevel.Size = new System.Drawing.Size(120, 20);
+            this.domainUpDownUserLevel.TabIndex = 4;
+            this.domainUpDownUserLevel.Text = "domainUpDown1";
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(334, 50);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(51, 13);
+            this.labelPassword.TabIndex = 3;
+            this.labelPassword.Text = "Lösenord";
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(198, 51);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(79, 13);
+            this.labelUsername.TabIndex = 2;
+            this.labelUsername.Text = "Användarnamn";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(334, 69);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(198, 70);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1019,6 +1103,8 @@
             this.groupBox_Bokning_Aktiviteter.ResumeLayout(false);
             this.groupBox_Bokning_Aktiviteter.PerformLayout();
             this.groupBox_Bokning_Medlemmar.ResumeLayout(false);
+            this.tabPage.ResumeLayout(false);
+            this.tabPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1116,6 +1202,14 @@
         private System.Windows.Forms.Button button_Aktivitet_Update;
         private System.Windows.Forms.Button button_Aktivitet_add;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelUserlevel;
+        private System.Windows.Forms.DomainUpDown domainUpDownUserLevel;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
