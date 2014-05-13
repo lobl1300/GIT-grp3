@@ -43,6 +43,11 @@ namespace Gymverksamhet_G3
             }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //METODER
 
 
