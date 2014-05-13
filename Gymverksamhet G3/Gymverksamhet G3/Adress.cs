@@ -12,7 +12,8 @@ namespace Gymverksamhet_G3
         public string Gatuadress { get; set; }
         public string Postnummer { get; set; }
         public string Ort { get; set; }
-        public string land { get; set; } // bara en test i GIT Jag fattar inte vad det är för fel?????????
+        public string land { get; set; } // bara en test i GIT Jag fattar inte vad det är för fel???
+        public string län { get; set; }
         
         //METODER
         public override string ToString()
