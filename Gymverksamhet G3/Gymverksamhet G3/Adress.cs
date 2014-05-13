@@ -13,6 +13,7 @@ namespace Gymverksamhet_G3
         public string Postnummer { get; set; }
         public string Ort { get; set; }
         public string land { get; set; } // bara en test i GIT
+                                         //Lotta testar med! 
         
         //METODER
         public override string ToString()
